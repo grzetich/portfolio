@@ -1,4 +1,4 @@
-#Edward Grzetich, Technical Writer
+# Edward Grzetich, Technical Writer
 
 I have contributed to integrated teams designing, developing, and supporting complex systems by creating user assistance information, maintenance information, troubleshooting guides, and descriptive information. I used many sources to develop technical information, including drawings, requirements, design documents, parts lists, test procedures, system performance metrics, direct observation and use of the subject system, and communication with other team members. Information was developed according to military, industry, or corporate standards and typically as structured information designed for single-source reuse.
   
