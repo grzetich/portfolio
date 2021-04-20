@@ -7,8 +7,8 @@ I have contributed to integrated teams designing, developing, and supporting com
 My experience and methods will make an asset to your company or project:
 * I have experience as both an individual contributor and a team leader, estimating and managing schedule and budget and clearing roadblocks for my team members. 
 * I am comfortable representing my team to internal and external customers. I have presented to customers and led meetings and reviews.
-* *I take every opportunity enrich technical information I produce through hands-on experience with the subjects of my work and meeting and understanding the people who use them and the environments in which they do so.
-* *I have proficiency in authoring and maintaining technical information in extensible markup language (XML) and reusing it in a content management system.
+* I take every opportunity enrich technical information I produce through hands-on experience with the subjects of my work and meeting and understanding the people who use them and the environments in which they do so.
+* I have proficiency in authoring and maintaining technical information in extensible markup language (XML) and reusing it in a content management system.
 
 I approach my work looking for tasks or processes to simplify and automate and team members to help. When practical, I try to find my own answers to questions and when not, avoid coming for help with a blank page or an empty hand. I look to meet future goals while using experience gained in the past.
 
