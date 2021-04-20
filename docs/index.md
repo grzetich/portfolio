@@ -4,7 +4,7 @@ Throughout my 21-year career as a technical communicator, I have supported inter
 
 I have contributed to integrated teams designing, developing, and supporting complex systems by creating user assistance information, maintenance information, troubleshooting guides, and descriptive information. I used many sources to develop technical information, including drawings, requirements, design documents, parts lists, test procedures, system performance metrics, direct observation and use of the subject system, and communication with other team members. Information was developed according to military, industry, or corporate standards and typically as structured information designed for single-source reuse.
   
-My experience and methods will make an asset to company:
+My experience and methods will make an asset to your company or project:
 * I have experience as both an individual contributor and a team leader, estimating and managing schedule and budget and clearing roadblocks for my team members. 
 * I am comfortable representing my team to internal and external customers. I have presented to customers and led meetings and reviews.
 * *I take every opportunity enrich technical information I produce through hands-on experience with the subjects of my work and meeting and understanding the people who use them and the environments in which they do so.
