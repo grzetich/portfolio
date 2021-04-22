@@ -3,5 +3,5 @@
 
 @import "{{ site.theme }}";
 ul {
-    padding: 10
+    padding: 10;
 }
