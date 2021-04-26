@@ -1,6 +1,6 @@
 # Edward Grzetich, Technical Writer
 
-* Twenty-one years of experience as a technical writer.
+* Experienced technical writer.
 * Diverse subjects--software-as-a-service (SaaS) to satellite ground terminals.
 * Leadership experience from small teams to $3 million projects.
 * Developed and delivered in-person technical training.
