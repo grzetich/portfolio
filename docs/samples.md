@@ -1,12 +1,10 @@
 
 # Writing samples
 
-[Help desk agent work instructions](/assets/other/hd_wi.pdf)  |  [Laptop user's guide](/assets/other/lptp_trn.pdf)
+[Help desk agent work instruction](/assets/other/hd_wi.pdf)  |  [Laptop user's guide](/assets/other/lptp_trn.pdf)
 
 
-Two samples of my work from the time I spent at Lincoln Reinsurance (Lincoln Re) from 1998 to 2002. 
-
-During that time, I worked as an internal help desk agent and process manager. As process manager, I performed technical writing tasks such as contributing information to the knowledgebase used to answer customers' questions and solve their issues, producing work instructions for help desk agents, and providing information to the rest of the company from the information technology department. 
+When I produced these items, I worked as an internal help desk agent and process manager for an international reinsurance corporation. As process manager, I performed technical writing tasks such as contributing information to the knowledgebase used to answer customers' questions and solve their issues, producing work instructions for help desk agents, and providing information to the rest of the company from the information technology department. 
 
 The audience of the [work instruction](/assets/other/hd_wi.pdf) was help desk agents. It provides instructions to complete a process as part of a larger effort to solve a networking issue. Information in the knowledgebase would guide them to this process and then direct them to the next part of the effort. I produced it in Microsoft Word and from a template I created to automate including information in the first-page header using VBScript. 
 
