@@ -6,7 +6,7 @@ git_source(:github) {|grzetich| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem "jekyll", "~> 4.2"
+gem "jekyll"
 
 gem "http_parser", "~> 0.1.3"
 
