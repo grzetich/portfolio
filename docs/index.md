@@ -1,13 +1,11 @@
 # Edward Grzetich, Technical Writer
 
-* Experienced technical writer.
-* Diverse subjects--software-as-a-service (SaaS) to satellite ground terminals.
-* Leadership experience from small teams to $3 million projects.
-* Developed and delivered in-person technical training.
-* Enriches technical information with hands-on experience with subject matter and meeting and understanding the people who use them and the environments in which they do so.
-* Worked remotely for over six years successfully with geographically dispersed teams.
-* Intellectually curious; mechanically and technologically apt.
+  I am a professional technical writer with over 23 years of experience.
 
-I approach my work looking for tasks or processes to simplify and automate and team members to help. When practical, I try to find my own answers to questions and when not, avoid coming for help with a blank page or an empty hand. I look to meet future goals while using past experience.
+  I am a hard-working, dependable team player. I deliver technical information to highly-satisfied customers within budget and schedule by identifying and leveraging opportunities to to automate the development of reusable information and by helping my teammates grow. And I've done this for over eight years working remotely as part of teams with members around the world.
+
+  I get up to speed on new subject matter quickly, and I will make an immediate positive impact on your team's performance.
+
+
 
 [Contact](mailto:ed.grzetich@gmail.com)  |  [Writing samples](samples.html)  |  [Resumé](assets/other/Grzetich.pdf)
