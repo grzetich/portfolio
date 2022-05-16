@@ -1,4 +1,3 @@
-
 # Writing samples
 
 [Pleasing customers by the numbers published article](/assets/other/article.pdf) | [Help desk agent work instruction](/assets/other/hd_wi.pdf)  |  [Laptop user's guide](/assets/other/lptp_trn.pdf) | [Open-source contribution](http://anywhereboardgames.com/?Using_Anywhere_Board_Games) | [SaaS user-assistance information](#saas)
@@ -17,7 +16,7 @@ We at the help desk became aware of this as calls and questions came to us about
 This sample contains descriptive, procedural, and troubleshooting types of information and artwork describing parts of a laptop. I produced the guide in Microsoft *Word*.
 
 ## As a contributor to an open-source project
-In 2013, I volunteered to write [user-assistance information](http://anywhereboardgames.com/?Using_Anywhere_Board_Games) for an open-source software system to (play board games)[http://anywhereboardgames.com/] through Google *Hangouts*. I wrote the information in Google *Docs* and the project leader and primary software developer made the information available through the project's Web site and kindly [thanked me](http://anywhereboardgames.com/?Thank_You). The information includes descriptions of how to set up the server software and how to use it to play games.
+In 2013, I volunteered to write [user-assistance information](http://anywhereboardgames.com/?Using_Anywhere_Board_Games) for an open-source software system to [play board games](http://anywhereboardgames.com/) through Google *Hangouts*. I wrote the information in Google *Docs* and the project leader and primary software developer made the information available through the project's Web site and kindly [thanked me](http://anywhereboardgames.com/?Thank_You). The information includes descriptions of how to set up the server software and how to use it to play games.
 
 ## As a contractor for a SaaS product<a name="saas"/>
 Most recently, I produced user assistance information for electronic health record (EHR) software delivered online as a service (SaaS). I did this work as a contractor and the information was developed in the customer's docs-as-code environment, using Atlassian *Confluence*, markdown files, a *GitHub* repository, and a *hugo* static site generator server. I installed and maintained a development version of the toolchain and site on my computer and published the information through the GitHub repository.
