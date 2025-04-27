@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 paginate: true
 ---
 
@@ -20,6 +20,7 @@ For the [Snowball Edge service documentation](https://docs.aws.amazon.com/snowba
 * Poor customer sentiment.
 * Low pageview.
 * Subject of a high number of tickets.
+
 I worked with members of the service and support teams to ensure content on the identified pages was correct and current and looked for opportunities to rewrite or combine topics that had little information or were separate from related topics and resulted in difficulty to find complete information on a subject or task. 
 
 I have contributed in a number of ways to the Simple Storage Service (S3) service documentation.
@@ -30,7 +31,6 @@ To update procedures to account for the changes in the console interface, I used
   * Finally, I provided the tools the XML code to use to make the changes.
   * For quality control, I spot-checked the changed code and used the text output as input to another AI tool to perform the procedures in the AWS console and identify any problems it found.
 I feel that using AI as a work partner was more thorough and less prone to error than other methods, such as searching the documentation for topics that needed to be updated and updating them manually or through a large-scale change like find-replace. 
-
 
 ## As a help desk process manager
 When I produced these items, I worked as an internal help desk agent and process manager for an international reinsurance corporation. As process manager, I performed technical writing tasks such as contributing information to the knowledgebase used to answer customers' questions and solve their issues, producing work instructions for help desk agents, and providing information to the rest of the company from the information technology department. 
@@ -44,5 +44,3 @@ The [selection of pages](/assets/other/lptp_trn.pdf) from a laptop user's guide 
 We at the help desk became aware of this as calls and questions came to us about laptops and their use. Aware of this trend and with customers' questions and issues recorded by help desk agents, I went to management with the idea to provide an introductory training course and user's guide on the use of laptop computers and working remotely. My idea was approved and I produced the guide, had it printed internally by the corporate print shop, and arranged the details and resources of conducting the courses. Over approximately the next two years, I conducted the courses bi-monthly or as demand dictated, laptop users were provided copies of the guide when their desktop computers were replaced, and help desk metrics showed a decrease in questions about basic laptop use and working remotely.
 
 This sample contains descriptive, procedural, and troubleshooting types of information and artwork describing parts of a laptop. I produced the guide in Microsoft *Word*.
-
-
