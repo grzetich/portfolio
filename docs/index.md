@@ -5,6 +5,8 @@
   View my [writing samples](#writing-samples) and [resumé](assets/other/Grzetich.pdf) or contact me via [email](mailto:ed.grzetich@gmail.com).
 
 # Writing samples
+These writing samples focus on work I did very early in my career and this year. The [earlier samples](#as-a-help-desk-process-manager) include work instructions for troubleshooting computer network issues, an article I wrote for an industry publication, and samples from a training course I created, wrote the material for, and conducted in person.
+The [latter samples](#for-amazon-web-services-aws) highlight content strategy and metrics analysis I did resulting in higher customer satisfaction for documentation, a collaborative writing effort I lead, and a task I substituted artificial intelligence (AI) tools to replace manual work.
 
 [For Amazon Web Services (AWS)](#for-amazon-web-services-aws) | [Pleasing customers by the numbers published article](/assets/other/article.pdf) | [Help desk agent work instruction](/assets/other/hd_wi.pdf)  |  [Laptop user's guide](/assets/other/lptp_trn.pdf) 
 
