@@ -5,8 +5,9 @@
   View my [writing samples](#writing-samples) and [resumé](assets/other/Grzetich.pdf) or contact me via [email](mailto:ed.grzetich@gmail.com).
 
 # Writing samples
-These writing samples focus on work I did very early in my career and this year. The [earlier samples](#as-a-help-desk-process-manager) include work instructions for troubleshooting computer network issues, an article I wrote for an industry publication, and samples from a training course I created, wrote the material for, and conducted in person.
-The [latter samples](#for-amazon-web-services-aws) highlight content strategy and metrics analysis I did resulting in higher customer satisfaction for documentation, a collaborative writing effort I lead, and a task I substituted artificial intelligence (AI) tools to replace manual work.
+These writing samples focus on work I did very early in my career and this year. The [most recent samples](#for-amazon-web-services-aws) highlight content strategy and metrics analysis I did resulting in higher customer satisfaction for documentation, a collaborative writing effort I lead to revise a highly-visible topic, and a task I substituted artificial intelligence (AI) tools for manual work to decrease error and risk.
+
+The [earlier samples](#as-a-help-desk-process-manager) include work instructions for troubleshooting computer network issues, an article I wrote for an industry publication, and samples from a training course I created, wrote the material for, and conducted in person.
 
 [For Amazon Web Services (AWS)](#for-amazon-web-services-aws) | [Pleasing customers by the numbers published article](/assets/other/article.pdf) | [Help desk agent work instruction](/assets/other/hd_wi.pdf)  |  [Laptop user's guide](/assets/other/lptp_trn.pdf) 
 
@@ -27,7 +28,8 @@ To update procedures to account for the changes in the console interface, I used
   * Then, I used the tools to identify the procedures that would need to be changed. 
   * Finally, I provided the tools the XML code to use to make the changes.
   * For quality control, I spot-checked the changed code and used the text output as input to another AI tool to perform the procedures in the AWS console and identify any problems it found.
-I feel that using AI as a work partner was more thorough and less prone to error than other methods, such as searching the documentation for topics that needed to be updated and updating them manually or through a large-scale change like find-replace. 
+
+Using AI as a work partner was more thorough and less prone to error than other methods, such as searching the documentation for topics that needed to be updated and updating them manually or through a large-scale change like find-replace. 
 
 ## As a help desk process manager
 When I produced these items, I worked as an internal help desk agent and process manager for an international reinsurance corporation. As process manager, I performed technical writing tasks such as contributing information to the knowledgebase used to answer customers' questions and solve their issues, producing work instructions for help desk agents, and providing information to the rest of the company from the information technology department. 
