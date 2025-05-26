@@ -12,6 +12,11 @@ The [earlier samples](#as-a-help-desk-process-manager) include work instructions
 [For Amazon Web Services (AWS)](#for-amazon-web-services-aws) | [Pleasing customers by the numbers published article](/assets/other/article.pdf) | [Help desk agent work instruction](/assets/other/hd_wi.pdf)  |  [Laptop user's guide](/assets/other/lptp_trn.pdf) 
 
 ## For Amazon Web Services (AWS)
+While working at AWS, I have primarily supported two services: Snowball Edge and Simple Storage Service (S3). While supporting the Snowball Edge service, I was a solo writer and responsible for maintaining relationships with the product managers and software development managers of the service to be aware of feature releases and other service changes that affect the docs. I also was responsible for managing and triaging docs tickets for the service, scheduling docs work, and reporting on docs activities to the larger customer experience team as well as the service team.
+
+For S3, I am a member of a docs team supporting one of the key AWS services. In this role, I am responsible for producing a wide range of docs, including API references, SDK code examples, and infrastructure-as-code framework. I also participate in the team's on-call rotation for ticket triage.
+
+### Snowball Edge service documentation
 For the [Snowball Edge service documentation](https://docs.aws.amazon.com/snowball/latest/developer-guide/whatisedge.html), I improved customer satisfaction over 30%. I used data about the documentation content to identify topics in need of improvement in three areas:
 * Poor customer sentiment.
 * Low pageview.
@@ -19,6 +24,18 @@ For the [Snowball Edge service documentation](https://docs.aws.amazon.com/snowba
 
 I worked with members of the service and support teams to ensure content on the identified pages was correct and current and looked for opportunities to rewrite or combine topics that had little information or were separate from related topics and resulted in difficulty to find complete information on a subject or task. 
 
+As a specific example, let's look at the [Configuring and using the Snowball Edge Client topic](https://docs.aws.amazon.com/snowball/latest/developer-guide/using-client-commands.html) in the AWS docs. This topic consistently received poor customer sentiment. When I reviewed it and compared it to the AWS styleguide and content strategy, I identified a number of issues:
+* **The topic contained too much information.** It attempted to include all of the commands available in the Snowball Edge Client tool. 
+* **The information it did contain was incomplete.** Often when a new feature was developed that had a new command for the client, it was include in another topic in the docs and wasn't added to the list in this topic. When an existing feature was upgraded or expanded, the information about the client commands weren't updated in this topic.
+* **The topic contained the wrong type of information.** In reviewing the topic with members of the service and support teams, I learned that the topic didn't provide information about the basics of using the client, such as how to install it on supported operating systems and how to configure it for use. 
+  
+Before I introduce the ways I improved the topic, some background information about the AWS Snowball Edge service is as helpful. AWS Snowball Edge is unique in AWS because it is a physical device that customers rent and is shipped to them to move data to or from AWS S3 or to run AWS compute instances without a connection to AWS. This makes the Snowball Edge service and device unique among AWS services because it can't be used through the main AWS customer interface, the management console. Instead, while customers have the devices, they interact with they through the Snowball Edge Client. 
+
+To improve this topic, I decided to reduce the content to cover the basic information about using the client and other commands that didn't have a better place in the docs. I carefully compared the information about commands in this topic to other locations in the docs to ensure coverage and removed that information from this topic. I downloaded and installed the client on the supported operating systems, updated the instructions for doing so, and had them reviewed by the support team. 
+
+By decreasing the length of the topic, focusing the information it provides, and removing incorrect or incomplete information in this topic and others in the docs, I was able to improve the customer satisfaction of the docs for this service by 30%.
+
+### S3
 I have contributed in a number of ways to the Simple Storage Service (S3) service documentation. In the last year, the service has grown from one to three bucket types to store objects. The documentation needed some follow-on work to include descriptions of the new bucket types and to update procedures to account for changes in the console interface to accommodate the new bucket types. 
 
 I collaborated with the service team and other members of the writing team to develop the new description of [bucket types](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html#BasicsBucket) to include the new bucket types (directory and table buckets) and improve the description of the original bucket type (general purpose buckets). The description of each bucket type now clearly explains why customers would want to choose it, describes how access can be granted, and includes a link for detailed information.
