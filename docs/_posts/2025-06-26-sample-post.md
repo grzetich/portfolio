@@ -1,4 +1,6 @@
+---
 layout: post title: My First API Resume Blog Post author: Ed Grzetich date: 2025-06-26 10:00:00 -0400 categories: [Technical Writing, Web Development, Jekyll] hero_image: https://placehold.co/1000x400/B91C1C/FFFFFF?text=Hero+Image # Direct URL for hero image placeholder description: "A deep dive into the benefits and implementation of an API-driven resume, combining technical writing with modern web development."
+---
 This is the content of my very first blog post about building an API-driven resume. The hero image above gives a visual flair to the post, while the structured Markdown ensures readability.
 
 It's an exciting time to be a technical content creator. With tools like Jekyll and GitHub Pages, we can build robust, dynamic, and visually appealing sites without needing complex server infrastructure. This allows for a focus on content and user experience, which are paramount.
