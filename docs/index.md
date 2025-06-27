@@ -15,7 +15,7 @@ View my writing samples and resumé or contact me via email.
         My solution was to drastically refine the topic. I stripped away redundant command information, ensuring only core client usage and commands not better suited elsewhere remained. I personally walked through the client installation process on various operating systems, updating instructions, and had these validated by the support team.
     </p>
     <p class="text-gray-700 mb-3">
-        This targeted approach—reducing noise, improving focus, and ensuring accuracy—across the Snowball Edge documentation led directly to the 30% surge in customer satisfaction.
+        This targeted approach—reducing noise, improving focus, and ensuring accuracy—across the Snowball Edge documentation led directly to the 30%  in upswing in customer satisfaction.
     </p>
 </div>
 
