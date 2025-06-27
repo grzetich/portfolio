@@ -1,0 +1,131 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "https://grzetich.github.com/",
+    "title": "JSON resume schema.",
+    "description": "Resume schema",
+    "type": "object",
+    "required": [
+        "contactinfo",
+        "experience",
+        "education"
+    ],
+    "properties": {
+        "contactinfo": {
+            "description": "Holds name, email, city, state, phone number, and URL.",
+            "type": "object",
+            "required": [
+                "name",
+                "email",
+                "phonenumber"
+            ],
+            "properties": {
+                "name": {
+                    "description": "Holds first and last name.",
+                    "first": {
+                        "description": "First name.",
+                        "type": "string"
+                    },
+                    "last": {
+                        "description": "Last name.",
+                        "type": "string"
+                    },
+                    "required": [
+                        "first",
+                        "last"
+                    ]
+                },
+                "email": {
+                    "description": "Email address.",
+                    "type": "string",
+                    "format": "email"
+                },
+                "city": {
+                    "description": "City",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "State; two-letter abbreviation.",
+                    "type": "string",
+                    "pattern": "^[A-Z]{2}"
+                },
+                "telephone": {
+                    "description": "Telephone number.",
+                    "type": "string",
+                    "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+                },
+                "url": {
+                    "description": "Web address",
+                    "type": "string",
+                    "format": "uri"
+                }
+            }
+        },
+            "objective": {
+                "description": "Carreer objective or summary.",
+                "type": "string"
+            },
+            "tools": {
+                "description": "Tools and technolgies to highlight.",
+                "type": "string"
+            },
+        "experience": {
+            "description": "Array of job objects.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "job": {
+                    "description": "Holds company, title, date start, and duties for each job.",
+                    "type": "object",
+                    "required": [
+                        "company",
+                        "title",
+                        "date_start",
+                        "duties"
+                    ],
+                    "properties": {
+                        "company": {
+                            "description": "Company name.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Title.",
+                            "type": "string"
+                        },
+                        "date_start": {
+                            "description": "Year started.",
+                            "type": "integer"
+                        },
+                        "date_end": {
+                            "description": "Year ended.",
+                            "type": "integer"
+                        },
+                        "duties": {
+                            "description": "Job description.",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "education": {
+            "description": "Holds school, year graduated, and degree",
+            "type": "object",
+            "school": {
+                "description": "Name of school.",
+                "type": "string"
+            },
+            "yeargrad": {
+                "description": "Year graduated.",
+                "type": "string"
+            },
+            "degree": {
+                "description": "Degree",
+                "type": "string"
+            },
+            "required": [
+                "school",
+                "degree"
+            ]
+        }
+    }
+}

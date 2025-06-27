@@ -1,0 +1,231 @@
+<section id="api-demo-section" class="section-container">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Resume REST API Demo</h2>
+    <p class="text-gray-700 text-lg mb-8 leading-relaxed text-center">
+        This page demonstrates a simulated REST API for resume data, fetching content from a `resume.json` file.
+        Interact with the buttons below to make "GET" requests and see the JSON responses.
+    </p>
+
+    <!-- API Interaction Section -->
+    <div class="mb-10 p-6 bg-red-50 rounded-lg border border-red-200">
+        <h2 class="text-2xl font-bold text-red-800 mb-4 text-center">API Interaction</h2>
+        <div id="api-buttons" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <button onclick="fetchData('/api/resume')" class="api-button bg-red-500 hover:bg-red-700 focus:ring-red-600 cursor-not-allowed" disabled>GET /api/resume</button>
+            <button onclick="fetchData('/api/contactinfo')" class="api-button bg-red-500 hover:bg-red-700 focus:ring-red-600 cursor-not-allowed" disabled>GET /api/contactinfo</button>
+            <button onclick="fetchData('/api/objective')" class="api-button bg-red-500 hover:bg-red-700 focus:ring-red-600 cursor-not-allowed" disabled>GET /api/objective</button>
+            <button onclick="fetchData('/api/experience')" class="api-button bg-red-500 hover:bg-red-700 focus:ring-red-600 cursor-not-allowed" disabled>GET /api/experience</button>
+            <button onclick="fetchData('/api/education')" class="api-button bg-red-500 hover:bg-red-700 focus:ring-red-600 cursor-not-allowed" disabled>GET /api/education</button>
+            <!-- Skills buttons removed as they are not in your resume.json -->
+        </div>
+
+        <div class="relative">
+            <pre id="api-output" class="bg-gray-800 text-green-400 p-6 rounded-lg text-sm overflow-auto max-h-96 shadow-inner border border-gray-700">
+                <div class="text-center text-gray-500">Loading resume data...</div>
+            </pre>
+            <button id="copy-button" class="absolute top-3 right-3 bg-gray-700 text-white p-2 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 transition duration-150 ease-in-out text-xs font-semibold" disabled>Copy</button>
+            <div id="copy-message" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-lg shadow-xl opacity-0 transition-opacity duration-300 pointer-events-none">Copied!</div>
+        </div>
+    </div>
+
+    <!-- API Reference Section -->
+    <div class="p-6 bg-red-50 rounded-lg border border-red-200">
+        <h2 class="text-2xl font-bold text-red-800 mb-4 text-center">API Reference</h2>
+        <p class="text-gray-700 mb-4">
+            All endpoints support HTTP GET requests and return JSON data. There are no PUT or DELETE actions.
+        </p>
+
+        <div class="space-y-6">
+            <!-- Each endpoint reference div -->
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">GET <span class="text-red-600">/api/resume</span></h3>
+                <p class="text-gray-600 mb-2">Returns the complete resume data.</p>
+                <pre class="bg-gray-100 text-gray-800 p-4 rounded-md text-xs overflow-auto max-h-48 border border-gray-300"><code>{
+    "contactinfo": { ... },
+    "objective": "...",
+    "experience": [ ... ],
+    "education": { ... }
+    }</code></pre>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">GET <span class="text-red-600">/api/contactinfo</span></h3>
+                <p class="text-gray-600 mb-2">Returns personal contact information.</p>
+                <pre class="bg-gray-100 text-gray-800 p-4 rounded-md text-xs overflow-auto max-h-32 border border-gray-300"><code>{
+    "name": {
+        "first": "Ed",
+        "last": "Grzetich"
+    },
+    "email": "ed.grzetich@gmail.com",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "phonenumber": "260-310-2516",
+    "url": "https://grzeti.ch"
+    }</code></pre>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">GET <span class="text-red-600">/api/objective</span></h3>
+                <p class="text-gray-600 mb-2">Returns the professional objective/summary.</p>
+                <pre class="bg-gray-100 text-gray-800 p-4 rounded-md text-xs overflow-auto max-h-32 border border-gray-300"><code>"Highly experienced Content Designer and Content Strategist with a proven track record of delivering high-quality, user-centered content solutions for diverse audiences..."</code></pre>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">GET <span class="text-red-600">/api/experience</span></h3>
+                <p class="text-gray-600 mb-2">Returns an array of work experience entries.</p>
+                <pre class="bg-gray-100 text-gray-800 p-4 rounded-md text-xs overflow-auto max-h-48 border border-gray-300"><code>[
+    {
+        "company": "AWS",
+        "title": "Senior Technical Writer Tech III",
+        "date_start": "2022",
+        "duties": "Led the full content design lifecycle..."
+    },
+    {
+        "company": "Mastercard",
+        "title": "Content Analyst II",
+        "date_start": "2021",
+        "date_end": "2022",
+        "duties": "Developed and implemented..."
+    }
+    ]</code></pre>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="font-semibold text-lg text-gray-800 mb-2">GET <span class="text-red-600">/api/education</span></h3>
+                <p class="text-gray-600 mb-2">Returns the educational details.</p>
+                <pre class="bg-gray-100 text-gray-800 p-4 rounded-md text-xs overflow-auto max-h-32 border border-gray-300"><code>{
+    "school": "Indiana University",
+    "degree": "Master of Arts"
+    }</code></pre>
+            </div>
+            <!-- Skills API references removed as they are not in your resume.json -->
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for API Demo - IMPORTANT: This script should be placed *after* the HTML elements it interacts with. -->
+<script>
+    let resumeData = null; // Global variable to store the fetched resume data
+    const apiOutput = document.getElementById('api-output');
+    const copyButton = document.getElementById('copy-button');
+    const copyMessage = document.getElementById('copy-message');
+    const apiButtonsContainer = document.getElementById('api-buttons');
+
+    /**
+     * Initializes the application by fetching resume.json.
+     * This is designed to be called once when the DOM is ready.
+     */
+    async function initializeResumeAPI() {
+        try {
+            // Use Jekyll's baseurl for the correct path to resume.json
+            const response = await fetch('{{ site.baseurl }}/resume.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            resumeData = await response.json(); // Store the fetched data
+
+            // Enable buttons and copy button once data is loaded
+            const buttons = apiButtonsContainer.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.disabled = false;
+                button.classList.remove('bg-red-500', 'cursor-not-allowed'); // Remove disabled state color
+                button.classList.add('bg-red-700', 'hover:bg-red-800', 'focus:ring-red-600'); // Apply active state colors
+            });
+            copyButton.disabled = false;
+            // No need to remove/add bg-gray-700 repeatedly, it's the default background
+            // copyButton.classList.remove('bg-gray-700');
+            // copyButton.classList.add('bg-gray-700');
+
+
+            // Display the full resume data by default
+            fetchData('/api/resume');
+
+        } catch (error) {
+            const errorMessage = `Error loading resume.json: ${error.message}. Please ensure 'resume.json' is in the site root and is valid JSON.`;
+            displayResult(null, errorMessage);
+            console.error(errorMessage, error);
+        }
+    }
+
+    /**
+     * Simulates a GET request to a specific API endpoint and displays the result.
+     * @param {string} endpoint The API endpoint to "fetch" (e.g., '/api/resume').
+     */
+    function fetchData(endpoint) {
+        let result = null;
+        let errorMessage = '';
+
+        if (!resumeData) {
+            errorMessage = "Resume data not yet loaded. Please wait or check for errors.";
+            displayResult(null, errorMessage);
+            return;
+        }
+
+        // Simple client-side routing based on the endpoint path
+        try {
+            if (endpoint === '/api/resume') {
+                result = resumeData;
+            } else if (endpoint === '/api/contactinfo') { // Updated endpoint name
+                result = resumeData.contactinfo; // Updated data key
+            } else if (endpoint === '/api/objective') { // Updated endpoint name
+                result = resumeData.objective; // Updated data key
+            } else if (endpoint === '/api/experience') {
+                result = resumeData.experience;
+            } else if (endpoint === '/api/education') {
+                result = resumeData.education; // Education is an object, not an array
+            } else { // Removed skills endpoints
+                errorMessage = `Error: Unknown endpoint '${endpoint}'.`;
+            }
+        } catch (error) {
+            errorMessage = `Error processing request for '${endpoint}': ${error.message}`;
+            console.error(errorMessage, error);
+        }
+
+        displayResult(result, errorMessage);
+    }
+
+    /**
+     * Displays the given data (or error message) in the output area.
+     * @param {any} data The data to display.
+     * @param {string} errorMessage Optional error message.
+     */
+    function displayResult(data, errorMessage = '') {
+        if (errorMessage) {
+            apiOutput.textContent = `// ${errorMessage}\n` + JSON.stringify({ error: errorMessage }, null, 2);
+            apiOutput.classList.remove('text-green-400');
+            apiOutput.classList.add('text-red-400');
+        } else if (data !== null) {
+            apiOutput.textContent = JSON.stringify(data, null, 2);
+            apiOutput.classList.remove('text-red-400');
+            apiOutput.classList.add('text-green-400');
+        } else {
+            apiOutput.textContent = 'No data to display.';
+            apiOutput.classList.remove('text-green-400', 'text-red-400');
+        }
+    }
+
+    // --- Copy to Clipboard Functionality ---
+    copyButton.addEventListener('click', () => {
+        const textToCopy = apiOutput.textContent;
+        if (textToCopy && !copyButton.disabled) {
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showCopyMessage();
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+    });
+
+    /** Shows a temporary "Copied!" message. */
+    function showCopyMessage() {
+        copyMessage.classList.add('opacity-100');
+        setTimeout(() => {
+            copyMessage.classList.remove('opacity-100');
+        }, 1500); // Message disappears after 1.5 seconds
+    }
+
+    // Initialize the API when the window loads
+    // This is important because the script interacts with DOM elements that must be parsed.
+    window.onload = initializeResumeAPI;
+</script>
