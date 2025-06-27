@@ -1,3 +1,8 @@
+---
+layout: default
+title: About me
+description: "About Ed Grzetich"    
+---
 # Call me Ed
 
  I am a highly experienced technical writer and content strategist with a proven track record of delivering high-quality technical information and content solutions on diverse topics for diverse audiences in coordination with teams around the corner and around the world. Skilled in leveraging AI for content enhancement and driving measurable improvements in customer satisfaction.

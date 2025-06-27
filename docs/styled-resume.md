@@ -1,3 +1,4 @@
+---
 layout: default
 title: My Styled Resume
 description: "A beautifully styled and interactive view of my professional resume, dynamically rendered from JSON data."
