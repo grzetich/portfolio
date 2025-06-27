@@ -1,78 +1,134 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-<!-- favicon -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }} - {{ page.title | default: site.description }}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Custom scrollbar for pre elements */
+        pre::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        pre::-webkit-scrollbar-track {
+            background: #e5e7eb; /* Lighter track */
+            border-radius: 10px;
+        }
+        pre::-webkit-scrollbar-thumb {
+            background: #9ca3af; /* Gray thumb */
+            border-radius: 10px;
+        }
+        pre::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Darker gray on hover */
+        }
+        /* Styling for content sections */
+        .section-container {
+            margin-bottom: 2.5rem; /* Equivalent to mb-10 */
+            padding: 2rem; /* Equivalent to p-8 */
+            background-color: #ffffff; /* bg-white */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            border: 1px solid #e5e7eb; /* border border-gray-200 */
+        }
+        /* Basic styling for markdown content within sections */
+        .section-container h1, .section-container h2, .section-container h3, .section-container h4, .section-container h5, .section-container h6 {
+            font-weight: bold;
+            color: #1f2937; /* gray-900 */
+            margin-bottom: 1rem;
+        }
+        .section-container h1 { font-size: 2.25rem; } /* text-4xl */
+        .section-container h2 { font-size: 1.875rem; } /* text-3xl */
+        .section-container h3 { font-size: 1.5rem; } /* text-2xl */
+        .section-container p {
+            color: #4b5563; /* gray-700 */
+            line-height: 1.625; /* leading-relaxed */
+            margin-bottom: 1rem;
+        }
+        .section-container ul, .section-container ol {
+            list-style-position: inside;
+            color: #4b5563; /* gray-700 */
+            margin-bottom: 1rem;
+        }
+        .section-container ul { list-style-type: disc; }
+        .section-container ol { list-style-type: decimal; }
+        .section-container li { margin-bottom: 0.5rem; }
+        .section-container a {
+            color: #b91c1c; /* red-700 */
+            text-decoration: underline;
+        }
+        .section-container a:hover {
+            color: #7f1d1d; /* red-900 */
+        }
+        .section-container strong { font-weight: bold; }
+        .section-container em { font-style: italic; }
 
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
-<link rel="manifest" href="../assets/images/site.webmanifest">
-<link rel="shortcut icon" href="../assets/images/favicon.ico">
+        /* Specific styling for project cards (if you use that structure) */
+        .project-card {
+            background-color: #f9fafb; /* gray-50 */
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+            border: 1px solid #e5e7eb; /* border border-gray-200 */
+        }
+        .project-card h3 {
+            color: #b91c1c; /* red-700 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            margin-bottom: 0.5rem;
+        }
+        .project-card a {
+            color: #b91c1c; /* red-700 */
+            text-decoration: underline;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
 
-<!-- favicon -->
-
-{% seo %}
-  </head>
-
-  <body>
-    <div id="container">
-      <div class="inner">
-
-        <header>
-          <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-          <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+        /* Styles for API Demo Buttons (pulled from previous HTML) */
+        .api-button {
+            padding: 0.75rem 1.5rem; /* py-3 px-6 */
+            border-radius: 0.5rem; /* rounded-md */
+            font-weight: 600; /* font-semibold */
+            color: #ffffff; /* text-white */
+            transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            text-align: center;
+            outline: none; /* Remove default focus outline */
+        }
+        .api-button:focus {
+            ring-width: 2px; /* focus:ring-2 */
+            ring-opacity: 0.5; /* focus:ring-opacity-50 */
+            ring-offset-width: 2px; /* focus:ring-offset-2 */
+            ring-offset-color: #f3f4f6; /* focus:ring-offset-gray-100 */
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-4xl mx-auto">
+        <!-- Global Site Header / Navigation -->
+        <header class="text-center mb-10">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">{{ site.title }}</h1>
+            <nav class="flex justify-center space-x-6 text-xl font-medium">
+                <a href="#about" class="text-red-700 hover:text-red-900 transition-colors">About Me</a>
+                <a href="#projects" class="text-red-700 hover:text-red-900 transition-colors">Projects</a>
+                <a href="#resume-text" class="text-red-700 hover:text-red-900 transition-colors">Resume</a>
+                <a href="#api-demo-section" class="text-red-700 hover:text-red-900 transition-colors">API Demo</a>
+            </nav>
         </header>
-        <section id="downloads" class="clearfix">
-          {% if site.show_downloads %}
-          <a href="{{ site.github.zip_url }}" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="{{ site.github.tar_url }}" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          {% endif %}
-	{% if site.github.public %}
-	  {% if site.github.is_project_page %}
-          <a href="{{ site.github.repository_url }}" id="view-on-github" class="button"><span>View on GitHub</span></a>
-	  {% else %}
-          <a href="{{ site.github.owner_url }}" id="view-on-github" class="button"><span>View on GitHub</span></a>
-	  {% endif %}
-	{% endif %}
-        </section>
-        <hr>
-        <section id="main_content">
-          {{ content }}
-        </section>
 
-        <footer>
-         <hr>
-         <!-- 
-           <div>
-           <a href="https://www.facebook.com/ed.grzetich"><img src="assets/images/fb_icon.png" alt="https://www.facebook.com/ed.grzetich" height="64" width="64"/></a><img src="assets/images/insta_icon.png"/>
-          </div> --> 
-        {% if site.github.is_project_page %}
-          {{ site.title | default: site.github.repository_name }} is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a><br>
-        {% endif %}
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.
+        <!-- Page Content will be injected here by Jekyll -->
+        {{ content }}
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 text-sm mt-10">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | split: "'" | first | strip }}. All rights reserved.</p>
         </footer>
-
-      </div>
     </div>
-
-    {% if site.google_analytics %}
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-      </script>
-    {% endif %}
-  </body>
+</body>
 </html>
