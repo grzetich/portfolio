@@ -1,9 +1,28 @@
-# show_downloads: false
-plugins_dir: jekyll-remote-theme
+# Site settings
+title: Portfolio of Ed Grzetich # Used in browser tab and site header
+description: "Your comprehensive portfolio featuring an API-driven resume, technical writing, content design projects, and a blog."
+author: Ed Grzetich # Default author for blog posts
+
+# Base URL and Permalink structure
+# Set baseurl to "" if hosted at the root of a GitHub Pages site (e.g., yourusername.github.io)
+# or to "/your-repo-name" if hosted at a project page (e.g., yourusername.github.io/your-repo-name)
+baseurl: ""
+url: "https://grzeti.ch" # No need to set this explicitly for GitHub Pages unless you have a custom domain
+
+# Build settings
+markdown: kramdown
+theme: minima # You can keep the default minima theme; our custom CSS will override most of it.
+permalink: /blog/:title.html # URL structure for blog posts (e.g., /blog/my-first-post.html)
+
+# Jekyll plugins (important for sitemap)
 plugins:
-- jekyll-remote-theme
-remote_theme: pages-themes/modernist@v0.2.0
-github: [metadata]
-title: Ed Grzetich, technical writer
-description: Portfolio for Ed Grzetich
-show_downloads: false
+  - jekyll-sitemap # Generates a sitemap.xml for SEO
+
+# Exclude these files from Jekyll processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .idea
+  - .vscode
