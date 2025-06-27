@@ -1,0 +1,44 @@
+{
+    "$schema": "resume_schema.json",
+    "$id": "https://grzetich.github.com/ejgapi",
+    "description": "Resume",
+    "type": "object",
+    "contactinfo": {
+        "name": {
+            "first": "Ed",
+            "last": "Grzetich"
+        },
+        "email": "ed.grzetich@gmail.com",
+        "city": "Fort Wayne",
+        "state": "IN",
+        "phonenumber": "260-310-2516",
+        "url": "https://grzeti.ch"
+    },
+    "objective": "Highly experienced Content Designer and Content Strategist with a proven track record of delivering high-quality, user-centered content solutions for diverse audiences, including complex B2B and enterprise environments. Skilled in leveraging AI for content enhancement, driving measurable improvements in customer satisfaction, and orchestrating cohesive narratives across multiple touchpoints. A systems thinker proficient in information architecture, language frameworks, and developing scalable content solutions, with demonstrated expertise in transforming complex technical information into clear, consistent, and engaging UI content. Adept at cross-functional collaboration and advocacy for content excellence within fast-paced, feedback-driven cultures.",
+    "experience": [
+        {
+            "company": "AWS",
+            "title": "Senior Technical Writer Tech III",
+            "date_start": "2022",
+            "duties": "Led the full content design lifecycle for feature releases across multiple AWS services, partnering closely with engineering and product teams to plan, develop, and deliver comprehensive user-facing documentation, including how-to guides, API references, and CLI/SDK references. Refactored, restructured, and updated documentation, applying a systems-thinking approach to improve clarity and usability, resulting in a 30% improvement in customer satisfaction. Developed meaningful code and script examples to enhance user understanding and adoption of AWS services, synthesizing highly complex technical information into practical content. Drove documentation projects from inception to completion, ensuring on-time delivery and adherence to quality standards in a highly technical and collaborative environment."
+        },
+        {
+            "company": "Mastercard",
+            "title": "Content Analyst II",
+            "date_start": "2021",
+            "date_end": "2022",
+            "duties": "Developed and implemented a comprehensive content strategy for business-to-business (B2B) information, focusing on clarity, accuracy, and timeliness to meet critical customer needs within an enterprise context. Cross-functional collaboration with internal partners to understand stakeholder requirements and ensure strategic alignment with business objectives for content delivery. Developed flexible and reusable content using DITA XML, demonstrating a strong foundation in information architecture and modular content design, facilitating content reuse and translation for various products and services."
+        },
+        {
+            "company": "General Dynamics",
+            "title": "Senior Advanced Technical Writing Specialist",
+            "date_start": "2003",
+            "date_end": "2020",
+            "duties": "Planned and led the development of technical manuals for complex hardware and software systems, managing projects from kick-off to final delivery and conducting progress reviews and validation events. Developed documentation according to various industry standards (S1000D, MIL-STD, DITA) and formats (PDF, HTML, IETM, hard copy), demonstrating adaptability and adherence to stringent customer requirements and codifying content patterns. Contributed to user understanding by creating clear and precise content for highly technical products, embodying a user-centered documentation approach."
+        }
+    ],
+"education": {
+    "school": "Indiana University",
+    "degree": "Master of Arts"
+}
+}
