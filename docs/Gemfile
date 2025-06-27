@@ -2,14 +2,16 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|grzetich| "https://github.com/#{repo_name}" }
+git_source(:github) {|grzetich| "https://github.com/#portfolio" }
+
+gem 'jekyll'
+# If you also installed the sitemap plugin, add it here:
+# gem 'jekyll-sitemap'
+# If you use any other plugins, list them here too.
 
 # gem "rails"
 
-gem "jekyll"
+# gem "github-pages", group: :jekyll_plugins
 
-gem "http_parser", "~> 0.1.3"
+# gem "jekyll-github-metadata", "~> 2.16"
 
-gem "em-websocket", "~> 0.5.3"
-
-gem "github-pages", group: :jekyll_plugins
