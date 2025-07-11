@@ -4,7 +4,7 @@ title: Home
 description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."    
 ---
 <div class="project-card">
-<h4 class="text-lg font-semibold text-gray-800 mb-2">Architecting a Resilient Pokémon TCG Data API for LLM Integration</h4>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Architecting a Resilient Pokémon TCG Data API for LLM Integration</h3>
 <p class="text-gray-700 mb-3">This project involved the development of a Python Flask API to serve comprehensive, real-time Pokémon Trading Card Game (TCG) data. The goal was to create a robust, accessible backend capable of supporting various applications, including seamless integration with Large Language Models (LLMs).</p>
 <p class="text-gray-700 mb-3">The journey from development to a fully operational backend presented several critical challenges:</p>
 <ul class="list-disc pl-5 text-gray-700 space-y-1 mb-3"><li>Persistent Deployment Issues: Initial deployment attempts on a Platform-as-a-Service (PaaS) encountered elusive, low-level server termination errors (SIGTERM) that required extensive, systematic debugging beyond typical application logs.</li>
@@ -21,9 +21,11 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 <li>Google Gemini</li>
 <li>Anthropic Claude Desktop</li>
 </ul>
-<p class="text-gray-700 mb-3"><a href="https://github.com/grzetich/pokemon-tcg-mcp" class="text-red-700 hover:underline" target="_blank">View Project Repository on GitHub</a></p></div>
+<p class="text-gray-700 mb-3"><a href="https://github.com/grzetich/pokemon-tcg-mcp" class="text-red-700 hover:underline" target="_blank">View Project Repository on GitHub</a></p>
+</div>
+
 <div class="project-card">
-<h4 class="text-lg font-semibold text-gray-800 mb-2">Spotlight: Enhancing the Snowball Edge Client Experience</h4>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Spotlight: Enhancing the Snowball Edge Client Experience</h3>
     <p class="text-gray-700 mb-3">
         Consider the <a href="https://docs.aws.amazon.com/snowball/latest/developer-guide/using-client-commands.html" class="text-red-700 hover:underline" target="_blank">Configuring and using the Snowball Edge Client</a> topic, a prime example of my impact. This topic was a consistent source of user frustration. My comprehensive audit, aligned with AWS's style and content strategy, revealed:
     </p>
