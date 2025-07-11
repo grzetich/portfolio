@@ -4,6 +4,25 @@ title: Home
 description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."    
 ---
 <div class="project-card">
+<h4 class="text-lg font-semibold text-gray-800 mb-2">Architecting a Resilient Pokémon TCG Data API for LLM Integration</h4>
+<p class="text-gray-700 mb-3">This project involved the development of a Python Flask API to serve comprehensive, real-time Pokémon Trading Card Game (TCG) data. The goal was to create a robust, accessible backend capable of supporting various applications, including seamless integration with Large Language Models (LLMs).</p>
+<p class="text-gray-700 mb-3">The journey from development to a fully operational backend presented several critical challenges:</p>
+<ul class="list-disc pl-5 text-gray-700 space-y-1 mb-3"><li>Persistent Deployment Issues: Initial deployment attempts on a Platform-as-a-Service (PaaS) encountered elusive, low-level server termination errors (SIGTERM) that required extensive, systematic debugging beyond typical application logs.</li>
+<li>Cloud Platform Migration: The necessity to pivot from one cloud provider to another, demanding adaptability in configuring environments, dependencies, and process management.</li>
+<li>Complex LLM Interoperability: Designing a communication layer for LLM integration that adhered to the Model Context Protocol (MCP), involving intricate JSON-RPC messaging and standard I/O stream handling.</li></ul>
+<p class="text-gray-700 mb-3">My solution involved a multi-faceted approach. I meticulously debugged the deployment issues, isolating environmental factors by simplifying the application and experimenting with various Python versions and Gunicorn configurations. This led to a strategic migration to Render.com, where the API was successfully deployed and now operates reliably, providing endpoints for card details, real-time pricing, set information, and more.</p>
+<p class="text-gray-700 mb-3">Furthermore, to enable LLM interaction, I developed a dedicated Python orchestrator. This component acts as a persistent local server, meticulously handling the JSON-RPC communication protocol, including message framing (Content-Length headers), and correctly processing standard protocol messages like initialize and shutdown. This ensures a stable and compliant bridge between LLMs (e.g., Claude) and the deployed Pokémon TCG API.</p>
+<p class="text-gray-700 mb-3">This project significantly deepened my expertise in backend architecture, cloud deployment, advanced troubleshooting, and the cutting-edge domain of LLM tooling and interoperability. It demonstrates my ability to build resilient systems and solve complex, multi-layered technical challenges from development through deployment and integration.</p>
+<p class="text-gray-700 mb-3">Tools used:
+<ul class="list-disc pl-5 text-gray-700 space-y-1 mb-3">
+<li>Microsoft Visual Studio Code</li>
+<li>Render.com</li>
+<li>GitHub</li>
+<li>Google Gemini</li>
+<li>Anthropic Claude Desktop</li>
+</ul>
+<p class="text-gray-700 mb-3"><a href="https://github.com/grzetich/pokemon-tcg-mcp" class="text-red-700 hover:underline" target="_blank">View Project Repository on GitHub</a></p></div>
+<div class="project-card">
 <h4 class="text-lg font-semibold text-gray-800 mb-2">Spotlight: Enhancing the Snowball Edge Client Experience</h4>
     <p class="text-gray-700 mb-3">
         Consider the <a href="https://docs.aws.amazon.com/snowball/latest/developer-guide/using-client-commands.html" class="text-red-700 hover:underline" target="_blank">Configuring and using the Snowball Edge Client</a> topic, a prime example of my impact. This topic was a consistent source of user frustration. My comprehensive audit, aligned with AWS's style and content strategy, revealed:
