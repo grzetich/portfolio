@@ -1,5 +1,5 @@
 ---
-layout: post title: My First API Resume Blog Post author: Ed Grzetich date: 2025-06-26 10:00:00 -0400 categories: [Technical Writing, Web Development, Jekyll] hero_image: https://placehold.co/1000x400/B91C1C/FFFFFF?text=Hero+Image # Direct URL for hero image placeholder description: "A deep dive into the benefits and implementation of an API-driven resume, combining technical writing with modern web development."
+layout: posts title: My First API Resume Blog Post author: Ed Grzetich date: 2025-06-26 10:00:00 -0400 categories: [Technical Writing, Web Development, Jekyll] hero_image: https://placehold.co/1000x400/B91C1C/FFFFFF?text=Hero+Image # Direct URL for hero image placeholder description: "A deep dive into the benefits and implementation of an API-driven resume, combining technical writing with modern web development."
 ---
 This is the content of my very first blog post about building an API-driven resume. The hero image above gives a visual flair to the post, while the structured Markdown ensures readability.
 

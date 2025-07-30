@@ -22,7 +22,6 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 <li>Anthropic Claude Desktop</li>
 </ul>
 <p class="text-gray-700 mb-3"><a href="https://github.com/grzetich/pokemon-tcg-mcp" class="text-red-700 hover:underline" target="_blank">View Project Repository on GitHub</a></p>
-</div>
 
 <div class="project-card">
 <h3 class="text-lg font-semibold text-gray-800 mb-2">Spotlight: Enhancing the Snowball Edge Client Experience</h3>

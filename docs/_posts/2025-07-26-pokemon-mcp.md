@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: Building a Bridge to Knowledge: My Pokemon Model Context Protocol Server
 date: 2025-07-26 10:00:00 -0400
 categories: [Technical Writing, Web Development, MCP, AI]
