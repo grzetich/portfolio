@@ -1,4 +1,6 @@
+---
 layout: default title: Blog description: "Stay up-to-date with my latest insights on technical content, web development, and design." permalink: /blog.html
+---
 <div class="posts-list space-y-6">
     {% for post in site.posts reversed %}
         <div class="post-list-item">
@@ -14,7 +16,7 @@ layout: default title: Blog description: "Stay up-to-date with my latest insight
             {% if post.excerpt %}
                 <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
             {% endif %}
-            <a href="{{ post.url | relative_url }}" class="text-red-700 hover:underline">Read More &rarr;</a>
+            <a href="{{ post.url | relative_url }}" class="text-red-700 hover:underline">Read More</a>
         </div>
     {% endfor %}
 </div>
