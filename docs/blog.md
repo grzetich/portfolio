@@ -1,5 +1,8 @@
 ---
-layout: default title: Blog description: "Stay up-to-date with my latest insights on technical content, web development, and design." permalink: /blog.html
+layout: default
+title: Blog
+description: "Stay up-to-date with my latest insights on technical content, web development, and design."
+permalink: /blog.html
 ---
 <div class="posts-list space-y-6">
     {% for post in site.posts reversed %}

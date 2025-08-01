@@ -1,10 +1,10 @@
 ---
 layout: posts
-title: Building a Bridge to Knowledge: My Pokemon Model Context Protocol Server
+title: Building a Bridge to Knowledge: My Pokémon Model Context Protocol Server
 date: 2025-07-26 10:00:00 -0400
 categories: [Technical Writing, Web Development, MCP, AI]
 hero_image: /assets/images/pocket-monster-mcp.png
-description: "How and why I created an MCP server for the Pokemon trading card game."
+description: "How and why I created an MCP server for the Pokémon trading card game."
 ---
 In the rapidly evolving landscape of Large Language Models (LLMs) and intelligent applications, one persistent challenge is the LLM's inherent limitation: they operate on a fixed knowledge base, typically cut off at their last training date. This means they can't access real-time, highly specific, or dynamically updated external data. This is where the concept of a Model Context Protocol (MCP) Server becomes incredibly powerful. 
 
@@ -14,20 +14,20 @@ An MCP server acts as a specialized intermediary, bridging the gap between an LL
 What made this project particularly exciting was the unique development process: I "vibe coded" this server collaboratively with an AI assistant. This modern approach allowed for rapid prototyping and iterative development, leveraging the AI's ability to quickly generate, refine, and debug code snippets based on high-level conceptual prompts. This collaboration not only accelerated the development cycle but also demonstrated a cutting-edge method of building complex backend systems with intelligent assistance.
 ## Why a Pokémon MCP Server?
 While the concept applies to any external data source, Pokémon data offers a fantastic, relatable, and rich dataset to showcase this technology:
-* Rich, Structured Data: Pokemon (and their associated moves, abilities, types, etc.) have a deep, well-defined, and consistent data structure, perfect for API interaction.
-* Relatability: Almost everyone has some familiarity with Pokemon, making the project immediately understandable and engaging.
-* Practical Application: Imagine an AI assistant that can instantly tell you a Pokemon's type weaknesses, its base stats, or what moves it learns at a certain level.
+* Rich, Structured Data: Pokémon (and their associated moves, abilities, types, etc.) have a deep, well-defined, and consistent data structure, perfect for API interaction.
+* Relatability: Almost everyone has some familiarity with Pokémon, making the project immediately understandable and engaging.
+* Practical Application: Imagine an AI assistant that can instantly tell you a Pokémon's type weaknesses, its base stats, or what moves it learns at a certain level.
 ## How It Works: The "Smart Proxy" in Action
-At its core, the Pokemon MCP Server is a Python Flask API that performs several critical functions:
-* **Receives LLM/Application Requests**: It listens for GET requests from an LLM (or a web application) asking for specific Pokemon data (e.g., "What is Pikachu's type?", "What moves does Charizard learn?").
-* **Queries External API**: It translates these natural language (or structured) requests into precise calls to a public Pokemon API, the widely used PokeAPI.
+At its core, the Pokémon MCP Server is a Python Flask API that performs several critical functions:
+* **Receives LLM/Application Requests**: It listens for GET requests from an LLM (or a web application) asking for specific Pokémon data (e.g., "What is Pikachu's type?", "What moves does Charizard learn?").
+* **Queries External API**: It translates these natural language (or structured) requests into precise calls to a public Pokémon API, the widely used PokeAPI.
 * **Parses & Filters Data**: The PokeAPI returns data in JSON format. The MCP server then parses this JSON, extracting only the most relevant pieces of information requested by the LLM. This is crucial for managing the LLM's context window and providing concise, actionable data.
 * **Handles API Constraints**: Public APIs often have rate limits (e.g., "don't make more than X requests per second"). My server implements logic to respect these limits, ensuring continuous, uninterrupted access. 
 * **Formats for LLM Consumption**: The extracted and filtered data is then formatted into a clean, structured JSON response that the LLM can easily understand and integrate into its generated answer.
 
 The flow looks something like this:
 
-User/LLM Query (e.g., "Tell me about Squirtle's abilities.") ➡️ My Pokemon MCP Server (Python/Flask) ➡️ PokeAPI (External Data Source) ➡️ Formatted JSON Response (back to LLM) ➡️ LLM's Grounded Answer (to User)
+User/LLM Query (e.g., "Tell me about Squirtle's abilities.") ➡️ My Pokémon MCP Server (Python/Flask) ➡️ PokeAPI (External Data Source) ➡️ Formatted JSON Response (back to LLM) ➡️ LLM's Grounded Answer (to User)
 
 ## Technical Skills Demonstrated
 This project showcases a robust set of backend and data integration skills:
@@ -41,4 +41,4 @@ This project showcases a robust set of backend and data integration skills:
 
 ## Why this matters for my portfolio
 
-The Pokemon MCP Server is more than just a fun coding exercise; it's a practical demonstration of how to build intelligent, data-aware applications. It highlights my ability to:Bridge Data Gaps: Create solutions that connect AI with the real world of information.Work with External Services: Integrate and manage data from third-party APIs.Develop Robust Backends: Build reliable and efficient server-side applications.Think Strategically about AI: Understand and address the limitations of LLMs to unlock new possibilities.Collaborate with AI: Embrace and leverage AI tools for accelerated development.This project represents a crucial step in building sophisticated AI-powered tools that are not only intelligent but also accurate and up-to-date.Feel free to explore the code here and see how this "smart proxy" brings the world of Pokemon to life for AI!
+The Pokémon MCP Server is more than just a fun coding exercise; it's a practical demonstration of how to build intelligent, data-aware applications. It highlights my ability to:Bridge Data Gaps: Create solutions that connect AI with the real world of information.Work with External Services: Integrate and manage data from third-party APIs.Develop Robust Backends: Build reliable and efficient server-side applications.Think Strategically about AI: Understand and address the limitations of LLMs to unlock new possibilities.Collaborate with AI: Embrace and leverage AI tools for accelerated development.This project represents a crucial step in building sophisticated AI-powered tools that are not only intelligent but also accurate and up-to-date.Feel free to explore the code here and see how this "smart proxy" brings the world of Pokémon to life for AI!
