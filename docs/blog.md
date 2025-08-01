@@ -7,7 +7,7 @@ permalink: /blog.html
 <div class="posts-list space-y-6">
     {% for post in site.posts reversed %}
         <div class="post-list-item">
-            <h3 class="text-2xl font-bold mb-2">
+            <h3>
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h3>
             <p class="post-meta">
