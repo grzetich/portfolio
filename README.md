@@ -1,8 +1,6 @@
 # Edward Grzetich, Technical Writer
 
-I am a professional technical writer with over 23 years of experience.
-
-I am a hard-working, dependable team player. I deliver technical information to highly-satisfied customers within budget and schedule by identifying and leveraging opportunities to to automate the development of reusable information and by helping my teammates grow. And I've done this for over eight years working remotely as part of teams with members around the world.
+I am a highly experienced technical writer and content strategist with a proven track record of delivering high-quality technical information and content solutions on diverse topics for diverse audiences in coordination with teams around the corner and around the world. Skilled in leveraging AI for content enhancement and driving measurable improvements in customer satisfaction.
 
 I get up to speed on new subject matter quickly, and I will make an immediate positive impact on your team's performance.
 

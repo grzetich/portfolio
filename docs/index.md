@@ -46,7 +46,7 @@ My solution was to drastically refine the topic. I stripped away redundant comma
 This targeted approach—reducing noise, improving focus, and ensuring accuracy—across the Snowball Edge documentation led directly to the 30%  in upswing in customer satisfaction.
 
 ---
-
+<!--
 ### S3 Documentation Updates with AI Tools
 
 I have contributed in a number of ways to the Simple Storage Service (S3) service documentation. In the last year, the service has grown from one to three bucket types to store objects. The documentation needed some follow-on work to include descriptions of the new bucket types and to update procedures to account for changes in the console interface to accommodate the new bucket types.
@@ -61,7 +61,7 @@ To update procedures to account for the changes in the console interface, I used
 *   For quality control, I spot-checked the changed code and used the text output as to another AI tool to perform the procedures in the AWS console and identify any problems it found.
 
 Using AI as a work partner was more thorough and less prone to error than other methods, such as searching the documentation for topics that needed to be updated and updating them manually or through a large-scale change like find-replace.
-
+-->
 ---
 
 **Quick Links:**

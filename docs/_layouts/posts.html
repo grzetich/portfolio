@@ -6,7 +6,7 @@ layout: default
     <article class="post-content">
         <!-- Hero Image (if available) -->
         {% if page.hero_image %}
-            <img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }} Hero Image" class="post-hero-image">
+            <img src="{{ site.baseurl }}{{ page.hero_image }}" alt="{{ page.title }} Hero Image" class="post-hero-image">
         {% endif %}
 
         <!-- Post Title -->
