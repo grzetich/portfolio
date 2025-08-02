@@ -1,16 +1,16 @@
 ---
 layout: posts
-title: Building a Bridge to Knowledge: My Pokémon Model Context Protocol Server
+title: My Pokémon Model Context Protocol Server
 date: 2025-07-26 10:00:00 -0400
 categories: [Technical Writing, Web Development, MCP, AI]
 hero_image: /assets/images/pocket-monster-mcp.png
-description: "How and why I created an MCP server for the Pokémon trading card game."
+description: "Creating an MCP server for the Pokémon trading card game."
 ---
 In the rapidly evolving landscape of Large Language Models (LLMs) and intelligent applications, one persistent challenge is the LLM's inherent limitation: they operate on a fixed knowledge base, typically cut off at their last training date. This means they can't access real-time, highly specific, or dynamically updated external data. This is where the concept of a Model Context Protocol (MCP) Server becomes incredibly powerful. 
 
 An MCP server acts as a specialized intermediary, bridging the gap between an LLM (or any other application) and the vast, ever-changing ocean of external information. It allows an AI to "look up" facts, retrieve specific data, and ground its responses in current, verified information.My latest project explores this concept by building a Pokémon MCP Server. 
 
-# A Collaborative Creation: Vibe Coding with AI
+## A Collaborative Creation: Vibe Coding with AI
 What made this project particularly exciting was the unique development process: I "vibe coded" this server collaboratively with an AI assistant. This modern approach allowed for rapid prototyping and iterative development, leveraging the AI's ability to quickly generate, refine, and debug code snippets based on high-level conceptual prompts. This collaboration not only accelerated the development cycle but also demonstrated a cutting-edge method of building complex backend systems with intelligent assistance.
 ## Why a Pokémon MCP Server?
 While the concept applies to any external data source, Pokémon data offers a fantastic, relatable, and rich dataset to showcase this technology:
