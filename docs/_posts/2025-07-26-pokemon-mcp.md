@@ -1,10 +1,10 @@
 ---
 layout: posts
-title: My Pokémon Model Context Protocol Server
-date: 2025-07-26 10:00:00 -0400
+post.title: My Pokémon Model Context Protocol Server
+post.date: 2025-07-26 10:00:00 -0400
 categories: [Technical Writing, Web Development, MCP, AI]
 hero_image: /assets/images/pocket-monster-mcp.png
-description: "Creating an MCP server for the Pokémon trading card game."
+post.description: "Creating an MCP server for the Pokémon trading card game."
 ---
 In the rapidly evolving landscape of Large Language Models (LLMs) and intelligent applications, one persistent challenge is the LLM's inherent limitation: they operate on a fixed knowledge base, typically cut off at their last training date. This means they can't access real-time, highly specific, or dynamically updated external data. This is where the concept of a Model Context Protocol (MCP) Server becomes incredibly powerful. 
 

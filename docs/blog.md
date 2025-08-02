@@ -8,15 +8,15 @@ permalink: /blog.html
     {% for post in site.posts reversed %}
         <div class="post-list-item">
             <h3>
-                <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h3>
             <p class="post-meta">
-                Published on {{ page.date | date: "%B %d, %Y" }}
+                Published on {{ post.date | date: "%B %d, %Y" }}
             </p>
             {% if post.excerpt %}
-                <p class="post-excerpt">{{ page.description | strip_html | truncatewords: 30 }}</p>
+                <p class="post-excerpt">{{ post.description | strip_html | truncatewords: 30 }}</p>
             {% endif %}
-            <a href="{{ page.url | relative_url }}">Read More</a>
+            <a href="{{ post.url | relative_url }}">Read More</a>
         </div>
     {% endfor %}
 </div>
