@@ -4,7 +4,7 @@ title: Home
 description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."    
 ---
 
-<div class="project-card">
+<div class="project-card" markdown="1">
 
 ### Architecting a Resilient Pokémon TCG Data API for LLM Integration
 
@@ -33,7 +33,7 @@ This project significantly deepened my expertise in backend architecture, cloud 
 
 </div>
 
-<div class="project-card">
+<div class="project-card" markdown="1">
 
 ### Spotlight: Enhancing the Snowball Edge Client Experience
 
@@ -51,7 +51,7 @@ This targeted approach—reducing noise, improving focus, and ensuring accuracy�
 
 </div>
 
-<div class="project-card">
+<div class="project-card" markdown="1">
 
 ### S3 Documentation Updates with AI Tools
 
@@ -70,7 +70,7 @@ Using AI as a work partner was more thorough and less prone to error than other 
 
 </div>
 
-<div class="project-card">
+<div class="project-card" markdown="1">
 
 **Quick Links:**
 
@@ -81,7 +81,7 @@ Using AI as a work partner was more thorough and less prone to error than other 
 
 </div>
 
-<div class="project-card">
+<div class="project-card" markdown="1">
 
 ### For Amazon Web Services (AWS)
 
@@ -91,7 +91,7 @@ For S3, I am a member of a docs team supporting one of the key AWS services. In 
 
 </div>
 
-<div class="project-card">
+<div class="project-card" markdown="1">
 
 ### As a Help Desk Process Manager
 
