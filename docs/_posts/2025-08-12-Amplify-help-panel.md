@@ -8,7 +8,7 @@ description: "Extending an open-source framework for user assistance."
 ---
 AWS sponsors a neat, open-source framework that anyone can use to integrate its services into Web and mobile apps. [AWS Amplify](https://aws.amazon.com/amplify) is a thorough framework to help developers easily combine functionality like authentication, data access, and storage with a modern UI to develop apps faster. What it lacks, however, is a way to provide help for users of Amplify apps. So, Claude and I created one.
 
-In my work at AWS, I became very familiar with the AWS Management Console help panel. I've written content for it, degugged it, and helped engineers extend it to be used outside of the console. AWS customers, too, are very familiar with the help panel. It provides them a convenient way to get guidance on their tasks and also other resources in the AWS docs that might help.
+In my work at AWS, I became very familiar with the AWS Management Console help panel. I've written content for it, debugged it, and helped engineers extend it to be used outside of the console. AWS customers, too, are very familiar with the help panel. It provides them a convenient way to get guidance on their tasks and also other resources in the AWS docs that might help.
 
 Looking at the Amplify framework, I noticed it's designed to provide what developers need to get their apps up and running quickly. It provides components for authentication, storage, and maps and location search. I opened up Claude Code and got to work on creating a help panel component so Amplify apps could provide users what they need to use the apps.
 
