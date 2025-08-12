@@ -1,10 +1,10 @@
 ---
 layout: posts
-post.title: Help panel component for AWS Amplify framework
-post.date: 2025-08-12 10:00:00 -0400
+title: Help panel component for AWS Amplify framework
+date: 2025-08-12 10:00:00 -0400
 categories: [Technical Writing, Web Development, AI]
 hero_image: /assets/images/amplify-help-panel.png
-post.description: "Extending an open-source framework for user assistance."
+description: "Extending an open-source framework for user assistance."
 ---
 AWS sponsors a neat, open-source framework that anyone can use to integrate its services into Web and mobile apps. [AWS Amplify](https://aws.amazon.com/amplify) is a thorough framework to help developers easily combine functionality like authentication, data access, and storage with a modern UI to develop apps faster. What it lacks, however, is a way to provide help for users of Amplify apps. So, Claude and I created one.
 
