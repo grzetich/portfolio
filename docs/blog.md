@@ -13,7 +13,7 @@ permalink: /blog.html
             <p class="post-meta">
                 Published on {{ post.date | date: "%B %d, %Y" }}
             </p>
-            {% if post.excerpt %}
+            {% if post.description %}
                 <p class="post-excerpt">{{ post.description | strip_html | truncatewords: 30 }}</p>
             {% endif %}
             <a href="{{ post.url | relative_url }}">Read More</a>

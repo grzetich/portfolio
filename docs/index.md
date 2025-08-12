@@ -4,6 +4,8 @@ title: Home
 description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."    
 ---
 
+<div class="project-card" markdown="1">
+
 ### Architecting a Resilient Pokémon TCG Data API for LLM Integration
 
 This project involved the development of a Python Flask API to serve comprehensive, real-time Pokémon Trading Card Game (TCG) data. The goal was to create a robust, accessible backend capable of supporting various applications, including seamless integration with Large Language Models (LLMs).
@@ -29,7 +31,9 @@ This project significantly deepened my expertise in backend architecture, cloud 
 
 [View Project Repository on GitHub](https://github.com/grzetich/pokemon-tcg-mcp)
 
----
+</div>
+
+<div class="project-card" markdown="1">
 
 ### Spotlight: Enhancing the Snowball Edge Client Experience
 
@@ -45,8 +49,10 @@ My solution was to drastically refine the topic. I stripped away redundant comma
 
 This targeted approach—reducing noise, improving focus, and ensuring accuracy—across the Snowball Edge documentation led directly to the 30%  in upswing in customer satisfaction.
 
----
-<!--
+</div>
+
+<div class="project-card" markdown="1">
+
 ### S3 Documentation Updates with AI Tools
 
 I have contributed in a number of ways to the Simple Storage Service (S3) service documentation. In the last year, the service has grown from one to three bucket types to store objects. The documentation needed some follow-on work to include descriptions of the new bucket types and to update procedures to account for changes in the console interface to accommodate the new bucket types.
@@ -61,8 +67,10 @@ To update procedures to account for the changes in the console interface, I used
 *   For quality control, I spot-checked the changed code and used the text output as to another AI tool to perform the procedures in the AWS console and identify any problems it found.
 
 Using AI as a work partner was more thorough and less prone to error than other methods, such as searching the documentation for topics that needed to be updated and updating them manually or through a large-scale change like find-replace.
--->
----
+
+</div>
+
+<div class="project-card" markdown="1">
 
 **Quick Links:**
 
@@ -71,7 +79,9 @@ Using AI as a work partner was more thorough and less prone to error than other 
 *   [Help desk agent work instruction]({{ site.baseurl }}/assets/other/hd_wi.pdf)
 *   [Laptop user's guide]({{ site.baseurl }}/assets/other/lptp_trn.pdf)
 
----
+</div>
+
+<div class="project-card" markdown="1">
 
 ### For Amazon Web Services (AWS)
 
@@ -79,7 +89,9 @@ While working at AWS, I have primarily supported two services: Snowball Edge and
 
 For S3, I am a member of a docs team supporting one of the key AWS services. In this role, I am responsible for producing a wide range of docs, including API references, SDK code examples, and infrastructure-as-code framework. I also participate in the team's on-call rotation for ticket triage.
 
----
+</div>
+
+<div class="project-card" markdown="1">
 
 ### As a Help Desk Process Manager
 
@@ -95,6 +107,6 @@ We at the help desk became aware of this as calls and questions came to us about
 
 This sample contains descriptive, procedural, and troubleshooting types of information and artwork describing parts of a laptop. I produced the guide in Microsoft *Word*.
 
----
+</div>
 
 {% include api_demo.html %}
