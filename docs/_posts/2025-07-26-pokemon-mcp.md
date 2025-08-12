@@ -41,4 +41,11 @@ This project showcases a robust set of backend and data integration skills:
 
 ## Why this matters for my portfolio
 
-The Pokémon MCP Server is more than just a fun coding exercise; it's a practical demonstration of how to build intelligent, data-aware applications. It highlights my ability to:Bridge Data Gaps: Create solutions that connect AI with the real world of information.Work with External Services: Integrate and manage data from third-party APIs.Develop Robust Backends: Build reliable and efficient server-side applications.Think Strategically about AI: Understand and address the limitations of LLMs to unlock new possibilities.Collaborate with AI: Embrace and leverage AI tools for accelerated development.This project represents a crucial step in building sophisticated AI-powered tools that are not only intelligent but also accurate and up-to-date.Feel free to explore the code here and see how this "smart proxy" brings the world of Pokémon to life for AI!
+The Pokémon MCP Server is more than just a fun coding exercise; it's a practical demonstration of how to build intelligent, data-aware applications. It highlights my ability to:
+* Bridge Data Gaps: Create solutions that connect AI with the real world of information.
+* Work with External Services: Integrate and manage data from third-party APIs
+* Develop Robust Backends: Build reliable and efficient server-side applications
+* Think Strategically about AI: Understand and address the limitations of LLMs to unlock new possibilities.
+* Collaborate with AI: Embrace and leverage AI tools for accelerated development.
+
+This project represents a crucial step in building sophisticated AI-powered tools that are not only intelligent but also accurate and up-to-date.Feel free to explore the code here and see how this "smart proxy" brings the world of Pokémon to life for AI!
