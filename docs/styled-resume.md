@@ -124,7 +124,7 @@ permalink: /resume.html
             image:        { type: 'jpeg', quality: 0.98 },
             html2canvas:  { scale: 2, useCORS: true },
             jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
-            pagebreak:    { mode: ['avoid-all', 'css'], before: '.section-container' }
+            pagebreak:    { mode: ['avoid-all', 'css'] }
         };
 
         // New Promise-based usage:
