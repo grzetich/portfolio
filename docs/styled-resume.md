@@ -14,6 +14,8 @@ permalink: /resume.html
             margin: 0;
             padding: 0;
             box-shadow: none;
+            color: #000;
+            background-color: #fff;
         }
         header, footer, #download-button-container {
             display: none !important;
@@ -22,6 +24,22 @@ permalink: /resume.html
             border: none !important;
             box-shadow: none !important;
             page-break-inside: avoid;
+        }
+        a {
+            color: #000 !important;
+            text-decoration: none;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #000 !important;
+        }
+        .text-red-700 {
+            color: #000 !important;
+        }
+        .text-gray-700, .text-gray-800, .text-gray-900 {
+            color: #000 !important;
+        }
+        body {
+            font-family: serif;
         }
     }
 </style>
