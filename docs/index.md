@@ -6,6 +6,32 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 
 <div class="project-card" markdown="1">
 
+### Help Panel Component for AWS Amplify Framework
+
+AWS sponsors a neat, open-source framework that anyone can use to integrate its services into Web and mobile apps. [AWS Amplify](https://aws.amazon.com/amplify) is a thorough framework to help developers easily combine functionality like authentication, data access, and storage with a modern UI to develop apps faster. What it lacks, however, is a way to provide help for users of Amplify apps. So, Claude and I created one.
+
+In my work at AWS, I became very familiar with the AWS Management Console help panel. I've written content for it, debugged it, and helped engineers extend it to be used outside of the console. AWS customers, too, are very familiar with the help panel. It provides them a convenient way to get guidance on their tasks and also other resources in the AWS docs that might help.
+
+Looking at the Amplify framework, I noticed it's designed to provide what developers need to get their apps up and running quickly. It provides components for authentication, storage, and maps and location search. I opened up Claude Code and got to work on creating a help panel component so Amplify apps could provide users what they need to use the apps.
+
+**Key functionality:**
+* **Context-sensitivity**: The content in the help panel needs to automatically change to reflect the part of the UI that is in use.
+* **Hideable**: The help panel needs to be hideable when the user wants it out of the way. It shouldn't always be open, taking up valuable screen area (especially important for mobile apps).
+* **Accessible**: The help panel includes ARIA labels and is compatible with screen readers. Its content is contained within JSON and can easily be localized.
+
+This project showcases a unique set of skills outside of technical writing: context engineering for AI tools, open-source contribution, and problem-solving. It shows I can go beyond writing, taking initiative to discover feature gaps that affect users, and deliver content solutions that address these gaps and user needs.
+
+**Tools used:**
+*   Claude Code
+*   GitHub
+*   AWS Amplify Framework
+
+[View Project Repository](https://github.com/grzetiche/amplify-ui-help-panel) | [View GitHub Issue](https://github.com/aws-amplify/amplify-js/issues/14512)
+
+</div>
+
+<div class="project-card" markdown="1">
+
 ### Architecting a Resilient Pokémon TCG Data API for LLM Integration
 
 This project involved the development of a Python Flask API to serve comprehensive, real-time Pokémon Trading Card Game (TCG) data. The goal was to create a robust, accessible backend capable of supporting various applications, including seamless integration with Large Language Models (LLMs).
@@ -51,7 +77,7 @@ This targeted approach—reducing noise, improving focus, and ensuring accuracy�
 
 </div>
 
-<div class="project-card" markdown="1">
+<!-- <div class="project-card" markdown="1">
 
 ### S3 Documentation Updates with AI Tools
 
@@ -68,7 +94,9 @@ To update procedures to account for the changes in the console interface, I used
 
 Using AI as a work partner was more thorough and less prone to error than other methods, such as searching the documentation for topics that needed to be updated and updating them manually or through a large-scale change like find-replace.
 
-</div>
+</div> -->
+
+{% include api_demo.html %}
 
 <div class="project-card" markdown="1">
 
@@ -108,5 +136,3 @@ We at the help desk became aware of this as calls and questions came to us about
 This sample contains descriptive, procedural, and troubleshooting types of information and artwork describing parts of a laptop. I produced the guide in Microsoft *Word*.
 
 </div>
-
-{% include api_demo.html %}
