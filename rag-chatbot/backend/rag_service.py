@@ -1,7 +1,10 @@
 import os
 from typing import Dict, List, Any
 from anthropic import AsyncAnthropic
-from database import VectorDatabase
+try:
+    from database import VectorDatabase
+except ImportError:
+    from simple_database import SimpleVectorDatabase as VectorDatabase
 from document_processor import DocumentProcessor
 
 class RAGService:
@@ -9,7 +12,7 @@ class RAGService:
         self.db = VectorDatabase()
         self.processor = DocumentProcessor()
         self.anthropic_client = AsyncAnthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-        self.resume_path = "../docs/_data/resume.json"
+        self.resume_path = "../../docs/_data/resume.json"
     
     async def initialize(self):
         await self.db.connect()
