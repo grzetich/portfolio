@@ -1,13 +1,23 @@
 import json
 from typing import List, Dict, Any
-from sentence_transformers import SentenceTransformer
 import numpy as np
 from pathlib import Path
+from portfolio_processor import PortfolioProcessor
+try:
+    from sentence_transformers import SentenceTransformer
+    USE_REAL_EMBEDDINGS = True
+except ImportError:
+    from mock_embeddings import MockEmbeddingModel
+    USE_REAL_EMBEDDINGS = False
 
 class DocumentProcessor:
     def __init__(self):
-        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        if USE_REAL_EMBEDDINGS:
+            self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        else:
+            self.embedding_model = MockEmbeddingModel()
         self.embedding_dimension = 384
+        self.portfolio_processor = PortfolioProcessor()
     
     def load_resume_json(self, file_path: str) -> Dict[str, Any]:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -76,6 +86,33 @@ class DocumentProcessor:
             })
         
         return chunks
+    
+    def chunk_all_content(self) -> List[Dict[str, Any]]:
+        """Process both resume and portfolio content into chunks"""
+        all_chunks = []
+        
+        # Load and chunk resume data
+        resume_data = self.load_resume_json("../../docs/_data/resume.json")
+        resume_chunks = self.chunk_resume(resume_data)
+        all_chunks.extend(resume_chunks)
+        
+        # Load and chunk portfolio content
+        portfolio_content = self.portfolio_processor.load_all_portfolio_content()
+        
+        # Convert portfolio content to the same format as resume chunks
+        for item in portfolio_content:
+            chunk = {
+                'content': f"{item['title']}: {item['content']}" if item.get('title') else item['content'],
+                'metadata': {
+                    'section': item['metadata']['section'],
+                    'content_type': item['type'],
+                    'source': item['source'],
+                    **item['metadata']
+                }
+            }
+            all_chunks.append(chunk)
+        
+        return all_chunks
     
     def embed_chunks(self, chunks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         texts = [chunk['content'] for chunk in chunks]

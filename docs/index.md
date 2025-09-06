@@ -6,6 +6,56 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 
 <div class="project-card" markdown="1">
 
+### AWS Amplify UI Help Panel Component
+
+Developed a comprehensive, reusable help panel component for AWS Amplify applications, demonstrating advanced React/TypeScript development skills and deep understanding of AWS Amplify ecosystem integration.
+
+This project showcases sophisticated component architecture with a focus on accessibility, usability, and developer experience:
+
+**Core Technical Implementation:**
+* **TypeScript & React:** Built entirely with TypeScript for type safety and modern React patterns including hooks and context API
+* **Zero Dependencies:** Leveraged only React built-ins for maximum compatibility and minimal bundle size
+* **Responsive Design:** Implemented adaptive layouts for desktop and mobile with CSS Grid and Flexbox
+* **Accessibility-First:** Complete ARIA implementation with keyboard navigation, focus management, and screen reader support
+
+**Advanced Features:**
+* **Contextual Intelligence:** Automatically switches help content based on current view and user actions
+* **Dynamic Content Management:** Supports structured help content with sections, links, and HTML formatting
+* **Customizable Architecture:** Extensible styling system and positioning options (left/right panel)
+* **Integration-Ready:** Designed specifically for AWS Amplify UI components like Storage Browser and Authenticator
+
+**Key Components Developed:**
+* **HelpPanel Component:** Main panel with collapsible sections and smooth animations
+* **useHelpContext Hook:** Custom React hook for context-aware help content selection
+* **Content Management System:** Structured data format for help content organization
+* **Demo Implementation:** Interactive demo showcasing real-time contextual help switching
+
+**AWS Amplify Integration:**
+The component seamlessly integrates with existing Amplify UI components, providing contextual help for:
+* Storage Browser operations (bucket management, file uploads, permissions)
+* Authentication flows (sign-in, sign-up, password recovery)
+* Form components and data management workflows
+
+**Browser Compatibility & Performance:**
+* Support for Chrome 60+, Firefox 60+, Safari 12+, Edge 79+
+* Optimized rendering with minimal DOM manipulation
+* Lazy loading for help content and smooth panel transitions
+
+This project demonstrates proficiency in modern frontend development practices, component library design, and creating developer-friendly tools that enhance user experience across AWS Amplify applications.
+
+**Tools & Technologies:**
+* TypeScript
+* React (Hooks, Context API)
+* CSS3 (Grid, Flexbox, Animations)
+* AWS Amplify UI Framework
+* ARIA/Accessibility Standards
+
+[View Project Repository on GitHub](https://github.com/grzetich/amplify-ui-help-panel)
+
+</div>
+
+<div class="project-card" markdown="1">
+
 ### Architecting a Resilient Pokémon TCG Data API for LLM Integration
 
 This project involved the development of a Python Flask API to serve comprehensive, real-time Pokémon Trading Card Game (TCG) data. The goal was to create a robust, accessible backend capable of supporting various applications, including seamless integration with Large Language Models (LLMs).
