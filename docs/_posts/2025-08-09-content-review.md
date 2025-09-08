@@ -19,6 +19,7 @@ For the X axis, we propose changing the text from:
 
 to:
 >Downloads (millions)
+
 This small change improves readability and scanability because the period of the chart is already established in the title (August 2025), making "monthly" redundant.
 For the Y axis, to avoid the overlap issue, we propose removing the axis label. The current label ("AI Development Libraries") duplicates information that is already in the title of the chart.
 We also recommend changing the chart title text from:
@@ -26,6 +27,7 @@ We also recommend changing the chart title text from:
 
 to:
 >AI Library Download Volume (August 2025)
+
 NPM is an acronym for Node Package Manager, a type of JavaScript library used for software development. Based on audience research, this level of detail is too great for this UX. It doesn't provide any necessary information and isn't used or defined anywhere else in the page. The title without it conveys the same information to the audience without introducing an unnecessary new term.
 ## Accessibility
 The second opportunity for improvement is in accessibility. This page is heavy with charts and tables. The information conveyed by or contained in them is crucial to understand the page. However, the current implementation is missing ARIA labels throughout, but most importantly, for charts.
