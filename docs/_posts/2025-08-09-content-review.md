@@ -15,17 +15,21 @@ The first opportunity for improvement is in chart labelling. The labels can be i
 If we can adapt the language used in the labels slightly, we can likely improve not only the overlap issue, but also readability and scanability. 
 ![image](/assets/images/proposed.png)
 For the X axis, we propose changing the text from:
+
 >Monthly Downloads (Millions)
 
 to:
+
 >Downloads (millions)
 
 This small change improves readability and scanability because the period of the chart is already established in the title (August 2025), making "monthly" redundant.
 For the Y axis, to avoid the overlap issue, we propose removing the axis label. The current label ("AI Development Libraries") duplicates information that is already in the title of the chart.
 We also recommend changing the chart title text from:
+
 >AI NPM Library Download Volume (August 2025)
 
 to:
+
 >AI Library Download Volume (August 2025)
 
 NPM is an acronym for Node Package Manager, a type of JavaScript library used for software development. Based on audience research, this level of detail is too great for this UX. It doesn't provide any necessary information and isn't used or defined anywhere else in the page. The title without it conveys the same information to the audience without introducing an unnecessary new term.
