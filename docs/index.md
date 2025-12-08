@@ -1,33 +1,119 @@
 ---
 layout: default
 title: Home
-description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."    
+description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."
 ---
 
-<div class="project-card" markdown="1">
+<div class="hero">
+    <h1>Ed Grzetich</h1>
+    <p class="subtitle">Senior Technical Writer Specializing in Developer Documentation</p>
 
-### Help Panel Component for AWS Amplify Framework
+    <div class="value-props">
+        <div class="value-prop">
+            <span class="icon">📚</span>
+            <p>API references and SDK guides that reduce time-to-integration</p>
+        </div>
+        <div class="value-prop">
+            <span class="icon">✅</span>
+            <p>Executable code examples validated through working applications</p>
+        </div>
+        <div class="value-prop">
+            <span class="icon">📈</span>
+            <p>Documentation systems that scale across distributed teams</p>
+        </div>
+        <div class="value-prop">
+            <span class="icon">🚀</span>
+            <p>AI-assisted workflows: 70% faster production, 30% better satisfaction</p>
+        </div>
+    </div>
 
-AWS sponsors a neat, open-source framework that anyone can use to integrate its services into Web and mobile apps. [AWS Amplify](https://aws.amazon.com/amplify) is a thorough framework to help developers easily combine functionality like authentication, data access, and storage with a modern UI to develop apps faster. What it lacks, however, is a way to provide help for users of Amplify apps. So, Claude and I created one.
+    <p class="availability">Available for full-time positions and contract engagements.</p>
+</div>
 
-In my work at AWS, I became very familiar with the AWS Management Console help panel. I've written content for it, debugged it, and helped engineers extend it to be used outside of the console. AWS customers, too, are very familiar with the help panel. It provides them a convenient way to get guidance on their tasks and also other resources in the AWS docs that might help.
+<section id="approach" class="approach-section">
+    <h2>My Approach to Developer Documentation</h2>
 
-Looking at the Amplify framework, I noticed it's designed to provide what developers need to get their apps up and running quickly. It provides components for authentication, storage, and maps and location search. I opened up Claude Code and got to work on creating a help panel component so Amplify apps could provide users what they need to use the apps.
+    <p class="intro">I believe great developer documentation requires building, not just writing. Over 15 years, I've developed a methodology that combines:</p>
 
-**Key functionality:**
-* **Context-sensitivity**: The content in the help panel needs to automatically change to reflect the part of the UI that is in use.
-* **Hideable**: The help panel needs to be hideable when the user wants it out of the way. It shouldn't always be open, taking up valuable screen area (especially important for mobile apps).
-* **Accessible**: The help panel includes ARIA labels and is compatible with screen readers. Its content is contained within JSON and can easily be localized.
+    <div class="approach-pillars">
+        <div class="pillar">
+            <h3>Deep Technical Understanding</h3>
+            <ul>
+                <li>I build working applications to validate API accuracy</li>
+                <li>I debug integration issues to understand developer friction</li>
+                <li>I test across platforms to ensure documentation completeness</li>
+            </ul>
+        </div>
 
-This project showcases a unique set of skills outside of technical writing: context engineering for AI tools, open-source contribution, and problem-solving. It shows I can go beyond writing, taking initiative to discover feature gaps that affect users, and deliver content solutions that address these gaps and user needs.
+        <div class="pillar">
+            <h3>AI-Augmented Workflows</h3>
+            <ul>
+                <li>Using tools like Claude, GitHub Copilot, and Gemini to accelerate development</li>
+                <li><strong>70% reduction</strong> in documentation production time at AWS</li>
+                <li><strong>30% improvement</strong> in customer satisfaction through validated examples</li>
+                <li>Focus on outcomes: documentation developers can trust</li>
+            </ul>
+        </div>
 
-**Tools used:**
-*   Claude Code
-*   GitHub
-*   AWS Amplify Framework
+        <div class="pillar">
+            <h3>Scalable Processes</h3>
+            <ul>
+                <li>Documentation systems that enable teams to contribute quality content</li>
+                <li>CI/CD integration for automated validation</li>
+                <li>Metrics-driven improvement cycles</li>
+            </ul>
+        </div>
+    </div>
 
-[View Project Repository](https://github.com/grzetiche/amplify-ui-help-panel) | [View GitHub Issue](https://github.com/aws-amplify/amplify-js/issues/14512)
+    <p class="approach-footer">This approach has proven successful across cloud services (AWS), payment platforms (Mastercard), and defense systems (General Dynamics).</p>
+</section>
 
+<div class="project">
+    <h3>AWS Amplify Help Panel Component</h3>
+
+    <div class="project-meta">
+        <span class="tag">React</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">AWS Amplify</span>
+        <span class="tag">AI-Assisted Development</span>
+        <span class="tag">Open Source</span>
+    </div>
+
+    <div class="project-section">
+        <h4>The Challenge</h4>
+        <p>AWS Amplify framework lacked contextual help, creating friction for app users despite developers building on a robust framework. While the framework provides excellent components for authentication, storage, and UI development, there was no built-in way for app users to get help when they needed it.</p>
+    </div>
+
+    <div class="project-section">
+        <h4>My Approach</h4>
+        <p>Rather than just document the gap, I built a solution using AI-assisted development (Claude Code) to create a React component providing AWS Console-style help. Drawing on my experience writing content for and debugging the AWS Management Console help panel, I designed a component that brings the same familiar, helpful experience to Amplify-built applications.</p>
+    </div>
+
+    <div class="project-section">
+        <h4>Technical Execution</h4>
+        <ul>
+            <li>React component with context-sensitivity and accessibility (ARIA labels)</li>
+            <li>JSON-based content architecture for easy localization</li>
+            <li>Integration with Amplify UI framework</li>
+            <li>Hideable interface optimized for mobile and desktop experiences</li>
+            <li>Automated content switching based on UI state</li>
+        </ul>
+    </div>
+
+    <div class="project-section">
+        <h4>Key Learnings</h4>
+        <p>Great documentation sometimes means extending the product itself. Understanding developer frameworks well enough to contribute improvements demonstrates deep technical empathy. This project showcases skills beyond traditional technical writing: AI prompt engineering, open-source contribution, and proactive problem-solving to address user needs.</p>
+    </div>
+
+    <div class="project-section">
+        <h4>Skills Demonstrated</h4>
+        <p>React/JavaScript • AI-assisted development • Open-source contribution • Developer experience design • Accessibility • Content architecture</p>
+    </div>
+
+    <div class="project-links">
+        <a href="https://github.com/grzetiche/amplify-ui-help-panel" target="_blank" class="btn btn-primary">View Repository</a>
+        <a href="https://github.com/aws-amplify/amplify-js/issues/14512" target="_blank" class="btn btn-secondary">GitHub Issue</a>
+    </div>
 </div>
 
 <div class="project-card" markdown="1">
@@ -136,3 +222,37 @@ We at the help desk became aware of this as calls and questions came to us about
 This sample contains descriptive, procedural, and troubleshooting types of information and artwork describing parts of a laptop. I produced the guide in Microsoft *Word*.
 
 </div>
+
+<section id="work-with-me" class="work-section">
+    <h2>Let's Work Together</h2>
+
+    <p class="intro">I'm open to opportunities that leverage my expertise in API documentation and developer-focused technical writing.</p>
+
+    <div class="engagement-types">
+        <div class="engagement">
+            <h3>Full-Time Roles</h3>
+            <p>Senior Technical Writer positions focused on developer documentation, API references, and SDK guides</p>
+        </div>
+
+        <div class="engagement">
+            <h3>Contract Engagements</h3>
+            <p>Documentation audits, API documentation projects, developer portal development, documentation system architecture</p>
+        </div>
+    </div>
+
+    <div class="what-i-bring">
+        <h3>What I Bring</h3>
+        <ul>
+            <li>15+ years proven experience across major tech companies</li>
+            <li>AI-assisted workflows with measurable efficiency gains</li>
+            <li>Ability to ramp quickly on complex technical products</li>
+            <li>Remote work track record</li>
+        </ul>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="mailto:ed.grzetich@gmail.com" class="btn btn-primary">Contact Me</a>
+        <a href="{{ site.baseurl }}/styled-resume.html" class="btn btn-secondary">View Resume</a>
+        <a href="https://github.com/grzetiche" class="btn btn-secondary" target="_blank">GitHub Profile</a>
+    </div>
+</section>
