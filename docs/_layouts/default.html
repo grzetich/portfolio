@@ -21,6 +21,93 @@
     <meta name="twitter:description" content="{{ page.description | default: site.description }}">
     <meta name="twitter:image" content="{% if page.hero_image %}{{ page.hero_image }}{% else %}https://placehold.co/1200x630/B91C1C/FFFFFF?text=Share+Image{% endif %}">
 
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ed Grzetich",
+      "jobTitle": "Senior Technical Writer",
+      "description": "Senior Technical Writer specializing in developer documentation, API references, and SDK guides with 15+ years of experience at AWS, Mastercard, and General Dynamics.",
+      "url": "{{ site.url }}",
+      "email": "ed.grzetich@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/ed-grzetich/",
+        "https://github.com/grzetiche"
+      ],
+      "knowsAbout": [
+        "Technical Writing",
+        "Developer Documentation",
+        "API Documentation",
+        "SDK Development",
+        "AI-Assisted Workflows",
+        "AWS Services",
+        "React",
+        "JavaScript",
+        "Python",
+        "Content Strategy",
+        "Documentation Systems"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Senior Technical Writer",
+        "occupationLocation": {
+          "@type": "Place",
+          "name": "Remote"
+        },
+        "skills": [
+          "API Documentation",
+          "Developer Experience",
+          "Technical Communication",
+          "AI-Augmented Writing",
+          "Content Architecture"
+        ]
+      },
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Amazon Web Services (AWS)"
+        },
+        {
+          "@type": "Organization",
+          "name": "Mastercard"
+        },
+        {
+          "@type": "Organization",
+          "name": "General Dynamics"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "description": "Professional portfolio featuring API-driven resume, technical writing samples, and developer documentation projects",
+      "author": {
+        "@type": "Person",
+        "name": "Ed Grzetich"
+      }
+    }
+    </script>
+
+    {% if page.title == "Home" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Ed Grzetich",
+        "description": "Senior Technical Writer specializing in developer documentation with expertise in API references, SDK guides, and AI-assisted workflows"
+      }
+    }
+    </script>
+    {% endif %}
+
     <style>
         /* --- Global Styles & Variables --- */
         :root {
