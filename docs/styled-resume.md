@@ -1,133 +1,57 @@
 ---
-layout: default
-title: My Styled Resume
-description: "A beautifully styled and interactive view of my professional resume, dynamically rendered from JSON data."
+layout: print
+title: Ed Grzetich - Resume
+description: "Professional resume for Ed Grzetich, Senior Technical Writer specializing in developer documentation."
 permalink: /resume.html
 ---
 
 {% assign resume = site.data.resume %}
 
-<style>
-    /* Add styles that will only apply when printing */
-    @media print {
-        body, .container {
-            margin: 0;
-            padding: 0;
-            box-shadow: none;
-            color: #000;
-            background-color: #fff;
-        }
-        header, footer, #download-button-container {
-            display: none !important;
-        }
-        .section-container, .project-card {
-            border: none !important;
-            box-shadow: none !important;
-            page-break-inside: avoid;
-        }
-        a {
-            color: #000 !important;
-            text-decoration: none;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: #000 !important;
-        }
-        .text-red-700 {
-            color: #000 !important;
-        }
-        .text-gray-700, .text-gray-800, .text-gray-900 {
-            color: #000 !important;
-        }
-        body {
-            font-family: serif;
-        }
-    }
-</style>
-
-<!-- Container for the download button -->
-<div id="download-button-container" style="text-align: center; margin-bottom: 1.5rem;">
-    <button id="download-pdf" style="padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; color: #ffffff; background-color: #b91c1c; border: none; cursor: pointer;">
-        Download as PDF
-    </button>
+<div class="button-container">
+    <button id="download-pdf" class="download-btn">Download as PDF</button>
 </div>
 
-<!-- The main resume content that will be converted to PDF -->
-<div id="resume-content">
-    <section id="contact-info" class="section-container">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">{{ resume.contactinfo.name.first }} {{ resume.contactinfo.name.last }}</h2>
-        <div class="text-center text-gray-700 leading-relaxed mb-4">
-            <p class="mb-2">
-                <strong>Email:</strong> <a href="mailto:{{ resume.contactinfo.email }}" class="text-red-700 hover:underline">{{ resume.contactinfo.email }}</a>
-            </p>
-            <p class="mb-2">
-                <strong>Phone:</strong> {{ resume.contactinfo.phonenumber }}
-            </p>
-            <p class="mb-2">
-                <strong>Location:</strong> {{ resume.contactinfo.city }}, {{ resume.contactinfo.state }}
-            </p>
-            <p class="mb-2">
-                <strong>Website:</strong> <a href="{{ resume.contactinfo.url }}" target="_blank" class="text-red-700 hover:underline">{{ resume.contactinfo.url }}</a>
-            </p>
-            {% if resume.contactinfo.github %} {# Check if github field exists #}
-            <p>
-        <strong>GitHub:</strong> <a href="https://github.com/grzetich" target="_blank" class="text-red-700 hover:underline">github.com/grzetich</a>
+<h1>{{ resume.contactinfo.name.first }} {{ resume.contactinfo.name.last }}</h1>
+
+<div class="contact-info">
+    <p>
+        <strong>Email:</strong> <a href="mailto:{{ resume.contactinfo.email }}">{{ resume.contactinfo.email }}</a> |
+        <strong>Phone:</strong> {{ resume.contactinfo.phonenumber }}
     </p>
-            {% endif %}
+    <p>
+        <strong>Location:</strong> {{ resume.contactinfo.city }}, {{ resume.contactinfo.state }} |
+        <strong>Website:</strong> <a href="{{ resume.contactinfo.url }}">{{ resume.contactinfo.url }}</a> |
+        <strong>GitHub:</strong> <a href="https://github.com/grzetich">github.com/grzetich</a>
+    </p>
+</div>
+
+<section class="summary">
+    <h2>Summary</h2>
+    <p>{{ resume.objective }}</p>
+</section>
+
+<section>
+    <h2>Experience</h2>
+    {% for job in resume.experience %}
+    <div class="job">
+        <div class="job-header">
+            <div class="job-title">{{ job.title }}</div>
+            <div class="job-company">{{ job.company }} • {{ job.date_start }} - {% if job.date_end %}{{ job.date_end }}{% else %}Present{% endif %}</div>
         </div>
-    </section>
-
-    <section id="objective" class="section-container">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Summary</h2>
-        <p class="text-gray-700 leading-relaxed">
-            {{ resume.objective }}
-        </p>
-    </section>
-
-    <section id="experience" class="section-container">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Experience</h2>
-        <div class="space-y-8">
-            {% for job in resume.experience %}
-            <div class="project-card">
-                <h3 class="text-xl font-semibold text-red-700 mb-1">{{ job.title }}</h3>
-                <p class="text-lg text-gray-800 mb-2">{{ job.company }} &bull; {{ job.date_start }} - {% if job.date_end %}{{ job.date_end }}{% else %}Present{% endif %}</p>
-                <div class="job-duties space-y-3">
-                    {% assign duties_list = job.duties | split: ". " %}
-                    {% for duty in duties_list %}
-                        {% if duty != "" %}
-                            <p class="text-gray-700">{{ duty | strip }}.</p>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
+        <div class="job-duties">
+            {% assign duties_list = job.duties | split: ". " %}
+            {% for duty in duties_list %}
+                {% if duty != "" %}
+                    <p>{{ duty | strip }}.</p>
+                {% endif %}
             {% endfor %}
         </div>
-    </section>
+    </div>
+    {% endfor %}
+</section>
 
-    <section id="education" class="section-container">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Education</h2>
-        <div class="project-card">
-            <h3 class="text-xl font-semibold text-red-700 mb-1">{{ resume.education.degree }}</h3>
-            <p class="text-lg text-gray-800">{{ resume.education.school }}</p>
-        </div>
-    </section>
-</div>
-
-<!-- Add the html2pdf.js library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-<script>
-    document.getElementById('download-pdf').addEventListener('click', function () {
-        const element = document.getElementById('resume-content');
-        const opt = {
-            margin:       0.5,
-            filename:     'Grzetich-resume.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true },
-            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
-            pagebreak:    { mode: ['avoid-all', 'css'] }
-        };
-
-        // New Promise-based usage:
-        html2pdf().set(opt).from(element).save();
-    });
-</script>
+<section class="education">
+    <h2>Education</h2>
+    <div class="degree">{{ resume.education.degree }}</div>
+    <div class="school">{{ resume.education.school }}</div>
+</section>

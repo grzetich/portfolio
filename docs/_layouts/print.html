@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0.25in;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 0.2in;
+            margin-bottom: 0.1in;
+            padding-bottom: 0.05in;
+            border-bottom: 2px solid #b91c1c;
+            color: #000;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 0.1in;
+            margin-bottom: 0.05in;
+            color: #b91c1c;
+            page-break-after: avoid;
+        }
+
+        p {
+            margin-bottom: 0.08in;
+            text-align: justify;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 0.2in;
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+
+        .contact-info p {
+            margin: 0;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 0.15in;
+            page-break-inside: avoid;
+        }
+
+        .summary {
+            margin-bottom: 0.15in;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 0.15in;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            margin-bottom: 0.05in;
+        }
+
+        .job-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #b91c1c;
+        }
+
+        .job-company {
+            font-size: 11pt;
+            font-weight: normal;
+            color: #000;
+            margin-top: 0.02in;
+        }
+
+        .job-duties {
+            margin-left: 0.2in;
+            margin-top: 0.05in;
+        }
+
+        .job-duties p {
+            margin-bottom: 0.06in;
+            position: relative;
+            padding-left: 0.15in;
+        }
+
+        .job-duties p:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Education */
+        .education {
+            page-break-inside: avoid;
+        }
+
+        .degree {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #b91c1c;
+        }
+
+        .school {
+            font-size: 11pt;
+            margin-top: 0.02in;
+        }
+
+        /* Button Container */
+        .button-container {
+            text-align: center;
+            margin-bottom: 0.2in;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #b91c1c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 11pt;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background: #7f1d1d;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0.5in;
+                max-width: 100%;
+            }
+
+            .button-container {
+                display: none !important;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            .job {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            h3 {
+                page-break-after: avoid;
+            }
+
+            a {
+                color: #000 !important;
+                text-decoration: none !important;
+            }
+        }
+
+        /* Screen-only styles */
+        @media screen {
+            body {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                margin: 1rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    {{ content }}
+
+    <!-- html2pdf.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        // Only attach event listener if button exists
+        const downloadBtn = document.getElementById('download-pdf');
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', function () {
+                // Hide the button before PDF generation
+                const buttonContainer = document.querySelector('.button-container');
+                if (buttonContainer) {
+                    buttonContainer.style.display = 'none';
+                }
+
+                const element = document.body;
+                const opt = {
+                    margin:       [0.5, 0.5, 0.5, 0.5],
+                    filename:     'Ed-Grzetich-Resume.pdf',
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  {
+                        scale: 2,
+                        useCORS: true,
+                        letterRendering: true
+                    },
+                    jsPDF:        {
+                        unit: 'in',
+                        format: 'letter',
+                        orientation: 'portrait',
+                        compress: true
+                    },
+                    pagebreak:    {
+                        mode: ['avoid-all', 'css', 'legacy'],
+                        before: 'h2',
+                        after: '.job'
+                    }
+                };
+
+                html2pdf().set(opt).from(element).save().then(function() {
+                    // Show button again after PDF is generated
+                    if (buttonContainer) {
+                        buttonContainer.style.display = 'block';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
