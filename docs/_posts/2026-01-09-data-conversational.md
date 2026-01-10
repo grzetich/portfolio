@@ -12,7 +12,7 @@ At the [Fort Wayne AI](https://www.fortwayne-ai.com/) meetup on 09 January, I pr
 This post captures what I learned building this architecture and what I shared with the developer community.
 
 <div style="margin: 2rem 0;">
-  <script async class="speakerdeck-embed" data-id="c948ad84a5fd4bc79c44e2e7e65ecfe3" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
+  <script async class="speakerdeck-embed" data-id="170f452c020f4f26a8112329fdd86a03" data-ratio="1.7777777777777777" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 ## The situation: Two audiences, one backend
