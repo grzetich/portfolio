@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ed Grzetich - Resume Chatbot Comparison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .api-selector {
+            padding: 15px;
+            background: #f8f9fa;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .api-selector button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .api-selector button.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .chat-sections {
+            display: flex;
+            flex: 1;
+        }
+
+        .chat-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .chat-section:last-child {
+            border-right: none;
+        }
+
+        .section-header {
+            padding: 15px;
+            background: #f8f9fa;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .chat-container {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #fafafa;
+            flex: 1;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            max-width: 90%;
+        }
+
+        .user-message {
+            margin-left: auto;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 18px 18px 5px 18px;
+        }
+
+        .bot-message {
+            background: white;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 5px 18px 18px 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .claude-bot {
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .gemini-bot {
+            border-left: 4px solid #10b981;
+        }
+
+        .input-section {
+            padding: 20px;
+            border-top: 1px solid #e9ecef;
+            background: white;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #messageInput {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        #sendButton {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .typing-indicator {
+            padding: 10px 15px;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 5px 18px 18px 18px;
+            margin-bottom: 15px;
+            max-width: 90%;
+            display: none;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .model-info {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .chat-sections {
+                flex-direction: column;
+            }
+            
+            .chat-section {
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+            }
+            
+            .chat-section:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ed Grzetich - Resume Assistant Comparison</h1>
+            <p>Compare responses from Claude (Anthropic) vs Gemini (Google) side by side</p>
+        </div>
+        
+        <div class="chat-sections">
+            <div class="chat-section">
+                <div class="section-header">
+                    Claude (Anthropic)
+                    <div class="model-info">claude-3-sonnet</div>
+                </div>
+                <div class="chat-container" id="claudeChat">
+                    <div style="text-align: center; color: #6c757d; padding: 20px; font-style: italic;">
+                        Ready to answer questions about Ed's resume
+                    </div>
+                </div>
+                <div class="typing-indicator" id="claudeTyping">
+                    <span>Claude is typing...</span>
+                </div>
+            </div>
+            
+            <div class="chat-section">
+                <div class="section-header">
+                    Gemini (Google)
+                    <div class="model-info">gemini-1.5-flash</div>
+                </div>
+                <div class="chat-container" id="geminiChat">
+                    <div style="text-align: center; color: #6c757d; padding: 20px; font-style: italic;">
+                        Ready to answer questions about Ed's resume
+                    </div>
+                </div>
+                <div class="typing-indicator" id="geminiTyping">
+                    <span>Gemini is typing...</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Ask a question about Ed's resume..." />
+                <button id="sendButton">Send to Both</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const CLAUDE_API = 'http://localhost:8000';
+        const GEMINI_API = 'http://localhost:8001';
+        
+        const claudeChat = document.getElementById('claudeChat');
+        const geminiChat = document.getElementById('geminiChat');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const claudeTyping = document.getElementById('claudeTyping');
+        const geminiTyping = document.getElementById('geminiTyping');
+
+        let isFirstMessage = true;
+
+        function addMessage(container, content, isUser = false, isError = false, model = '') {
+            if (isFirstMessage) {
+                claudeChat.innerHTML = '';
+                geminiChat.innerHTML = '';
+                isFirstMessage = false;
+            }
+
+            const messageDiv = document.createElement('div');
+            const className = isUser ? 'user-message' : 
+                             isError ? 'error-message' : 
+                             model === 'claude' ? 'bot-message claude-bot' : 
+                             'bot-message gemini-bot';
+            
+            messageDiv.className = `message ${className}`;
+            messageDiv.innerHTML = content;
+            
+            container.appendChild(messageDiv);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function showTyping(model) {
+            if (model === 'claude') {
+                claudeTyping.style.display = 'block';
+            } else {
+                geminiTyping.style.display = 'block';
+            }
+        }
+
+        function hideTyping(model) {
+            if (model === 'claude') {
+                claudeTyping.style.display = 'none';
+            } else {
+                geminiTyping.style.display = 'none';
+            }
+        }
+
+        async function sendToAPI(apiUrl, message, model) {
+            const container = model === 'claude' ? claudeChat : geminiChat;
+            
+            showTyping(model);
+            
+            try {
+                const response = await fetch(`${apiUrl}/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: message })
+                });
+
+                const data = await response.json();
+                hideTyping(model);
+                
+                if (!response.ok) {
+                    throw new Error(data.detail || `HTTP ${response.status}`);
+                }
+                
+                addMessage(container, data.response, false, false, model);
+                
+            } catch (error) {
+                hideTyping(model);
+                addMessage(container, 
+                    `Error: Unable to get response from ${model}. ${error.message}`, 
+                    false, true, model
+                );
+            }
+        }
+
+        async function sendMessage() {
+            const message = messageInput.value.trim();
+            if (!message) return;
+
+            // Add user message to both sides
+            addMessage(claudeChat, message, true);
+            addMessage(geminiChat, message, true);
+            
+            messageInput.value = '';
+            sendButton.disabled = true;
+
+            // Send to both APIs simultaneously
+            await Promise.all([
+                sendToAPI(CLAUDE_API, message, 'claude'),
+                sendToAPI(GEMINI_API, message, 'gemini')
+            ]);
+
+            sendButton.disabled = false;
+            messageInput.focus();
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Focus on input when page loads
+        messageInput.focus();
+    </script>
+</body>
+</html>
