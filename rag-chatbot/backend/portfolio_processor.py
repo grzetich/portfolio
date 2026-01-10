@@ -129,7 +129,7 @@ class PortfolioProcessor:
             }
         }
     
-    def chunk_large_content(self, item: Dict[str, Any], max_chunk_size: int = 1500) -> List[Dict[str, Any]]:
+    def chunk_large_content(self, item: Dict[str, Any], max_chunk_size: int = 300) -> List[Dict[str, Any]]:
         """Split large content into smaller chunks for better retrieval"""
         content = item['content']
         if len(content) <= max_chunk_size:

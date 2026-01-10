@@ -1,0 +1,64 @@
+{
+  "basic_software_skills": {
+    "description": "Fundamental software and tools that Ed knows but doesn't list on resume because they're considered basic professional skills",
+    "items": [
+      {
+        "category": "Office Software",
+        "skills": ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Google Docs", "Google Sheets", "Google Slides"],
+        "context": "Proficient in all standard office productivity software for document creation, spreadsheets, and presentations"
+      },
+      {
+        "category": "Communication Tools", 
+        "skills": ["Email", "Slack", "Microsoft Teams", "Zoom", "Google Meet", "Discord"],
+        "context": "Experienced with all major communication and collaboration platforms"
+      },
+      {
+        "category": "Basic Computer Skills",
+        "skills": ["File management", "Web browsing", "Basic troubleshooting", "Software installation", "PDF creation/editing"],
+        "context": "Standard computer literacy skills expected in professional environments"
+      },
+      {
+        "category": "Operating Systems",
+        "skills": ["Windows", "macOS", "Basic Linux"],
+        "context": "Comfortable working across different operating systems"
+      }
+    ]
+  },
+  "assumed_knowledge": {
+    "description": "Professional knowledge and experience that's implied but not explicitly detailed",
+    "items": [
+      {
+        "category": "Project Management",
+        "knowledge": ["Meeting facilitation", "Timeline planning", "Stakeholder communication", "Documentation practices"],
+        "context": "Standard project management activities performed throughout career"
+      },
+      {
+        "category": "Professional Skills",
+        "knowledge": ["Time management", "Client communication", "Problem solving", "Research methods", "Writing and editing"],
+        "context": "Core professional competencies developed through work experience"
+      },
+      {
+        "category": "Industry Knowledge",
+        "knowledge": ["Agile methodologies", "Software development lifecycle", "Documentation standards", "Quality assurance processes"],
+        "context": "Understanding gained through technical writing and content strategy roles"
+      }
+    ]
+  },
+  "personal_context": {
+    "description": "Additional context about Ed's background and approach",
+    "items": [
+      {
+        "topic": "Learning Approach",
+        "details": "Believes in learning tools and technologies as needed for specific projects rather than collecting certifications for skills that may become obsolete"
+      },
+      {
+        "topic": "Resume Philosophy", 
+        "details": "Focuses resume on meaningful technical skills and achievements rather than listing basic software proficiency that's expected in modern professional roles"
+      },
+      {
+        "topic": "Technical Adaptability",
+        "details": "Quickly learns new tools and platforms as needed - the specific tools matter less than the ability to adapt and learn"
+      }
+    ]
+  }
+}
