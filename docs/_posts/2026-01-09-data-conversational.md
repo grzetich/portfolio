@@ -5,6 +5,7 @@ description: "How I built an MCP server as a thin bridge on top of our REST API 
 date: 2026-01-09
 categories: [Web Development, AI]
 hero_image: "/assets/images/layers.jpg"
+image: /assets/mcp-blog-social.png
 ---
 
 At the [Fort Wayne AI](https://www.fortwayne-ai.com/) meetup on 09 January, I presented about a pattern I've discovered while building [Vibe Data](https://vibe-data.com): Making data conversational by using a model context protocol (MCP) server on top of existing REST APIs. Your API provide your data, an MCP server provides access to the API for a desktop LLM client like Claude or ChatGPT, and the LLM client provides conversational access to your data.
