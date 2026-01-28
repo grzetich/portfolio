@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0b141a"/>
+
+  <!-- Subtle pattern overlay -->
+  <defs>
+    <pattern id="chat-pattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="#1a2730" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#chat-pattern)"/>
+
+  <!-- Left bubble (incoming - white/light gray) -->
+  <g transform="translate(80, 100)">
+    <path d="M0 20 Q0 0 20 0 L280 0 Q300 0 300 20 L300 70 Q300 90 280 90 L30 90 L10 110 L15 90 L20 90 Q0 90 0 70 Z" fill="#ffffff"/>
+    <text x="150" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" fill="#111b21" text-anchor="middle">Ed says:</text>
+  </g>
+
+  <!-- Right bubble (outgoing - WhatsApp green) -->
+  <g transform="translate(420, 180)">
+    <path d="M0 20 Q0 0 20 0 L280 0 Q300 0 300 20 L300 70 Q300 90 280 90 L285 90 L290 110 L270 90 L20 90 Q0 90 0 70 Z" fill="#005c4b"/>
+    <text x="150" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" fill="#e9edef" text-anchor="middle">MyClawd says:</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#e9edef" text-anchor="middle">Oh My Clawd</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#8696a0" text-anchor="middle">A comedy series about AI gone helpfully wrong</text>
+</svg>
