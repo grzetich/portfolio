@@ -228,5 +228,6 @@ If you're building with MCP or thinking about conversational interfaces for your
 ## Resources
 
 - **Educational MCP Server:** [github.com/grzetich/ai-developer-tools-mcp](https://github.com/grzetich/ai-developer-tools-mcp)
+- **Presentation Video:** [View on YouTube](https://youtu.be/tzZ6-wo5Jk0)
 - **Presentation Slides:** [View on SpeakerDeck](https://speakerdeck.com/egrzetich/making-data-conversational-building-mcp-servers-as-api-bridges)
 - **MCP Documentation:** [modelcontextprotocol.io](https://modelcontextprotocol.io)
