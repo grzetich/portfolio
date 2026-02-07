@@ -37,7 +37,7 @@ The project originally used LDA (Latent Dirichlet Allocation), which is the text
 
 LDA topics shifted significantly between runs, even with a fixed random seed, because the input data changes daily (GitHub returns different repos each time). The topics were often incoherent, mixing unrelated terms. And because LDA uses raw word counts, common words dominated even when they weren't distinctive.
 
-NMF paired with TF-IDF solved all three problems. Topics are more coherent (the top words within each topic clearly relate to each other), more stable across runs, and better at surfacing distinctive terms rather than just frequent ones. The swap was nearly drop-in since both models are in scikit-learn with the same API.
+NMF paired with TF-IDF (Term Frequency-Inverse Document Frequency) solved all three problems. Topics are more coherent (the top words within each topic clearly relate to each other), more stable across runs, and better at surfacing distinctive terms rather than just frequent ones. The swap was nearly drop-in since both models are in scikit-learn with the same API.
 
 BERTopic would produce even better results using transformer embeddings for semantic understanding, but it requires 80-400MB for the sentence-transformers model, which won't fit on Render's free tier.
 
@@ -71,7 +71,7 @@ This is the weakest part of the system. If "react" happens to be the 6th word in
 - **Scheduling:** Background daemon thread checks hourly, runs analysis at 3 AM GMT
 - **Data:** 500 files per run, 30-day rolling history, 15 terms tracked in trends
 
-The app has no database. Historical data is an array of JSON objects appended to a file. Topic evolution tracking uses cosine similarity to match topics across runs despite label changes. The whole codebase is a single `app.py` file with Jinja2 templates.
+The app has no database. Historical data is an array of JSON objects appended to a file. Topic evolution tracking uses cosine similarity to match topics across runs despite label changes. The whole codebase is a single `app.py` file with Jinja2 templates. No user data is stored. All analysis is performed in memory on publicly available content. Temporary files are deleted after processing.
 
 ## What I learned
 
