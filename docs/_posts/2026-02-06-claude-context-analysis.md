@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: "Claude Context Analysis: What 500 CLAUDE.md Files Reveal About How Developers Use Claude"
+hero_image: /assets/images/claude-context.png   
 description: "I built a tool that scrapes CLAUDE.md files from GitHub and runs topic modeling to surface patterns in how developers configure Claude Code."
 date: 2026-02-06
 categories: [Web Development, AI, Data Science, Side Projects]
