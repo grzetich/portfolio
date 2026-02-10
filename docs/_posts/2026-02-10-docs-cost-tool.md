@@ -1,4 +1,4 @@
---
+---
 layout: posts
 title: "How Much Do Your Docs Cost to Read?"
 hero_image: /assets/images/docs-cost.png   
