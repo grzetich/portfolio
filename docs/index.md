@@ -118,6 +118,19 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 
 <div class="project-card" markdown="1">
 
+### How Much Do Your Docs Cost to Read?
+
+Did you know your audience has to pay to read your docs? They do if your audience is AI. I built a token cost calculator that lets you paste any structured documentation and see how many tokens it takes to represent it across different formats—JSON, YAML, JSON Compact, Plain Text—with cost estimates at scale.
+
+It runs entirely in the browser using cl100k_base tokenization. No AI, no API keys needed, and nothing leaves your machine.
+
+[Try the Calculator](https://doc-cost.vercel.app){: .btn .btn-primary target="_blank"}
+[Read the Blog Post]({{ site.baseurl }}/blog/docs-cost-tool.html){: .btn .btn-secondary}
+
+</div>
+
+<div class="project-card" markdown="1">
+
 ### Architecting a Resilient Pokémon TCG Data API for LLM Integration
 
 This project involved the development of a Python Flask API to serve comprehensive, real-time Pokémon Trading Card Game (TCG) data. The goal was to create a robust, accessible backend capable of supporting various applications, including seamless integration with Large Language Models (LLMs).
