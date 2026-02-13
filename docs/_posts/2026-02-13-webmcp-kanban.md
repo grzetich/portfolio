@@ -388,11 +388,31 @@ claude mcp add chrome-devtools npx @mcp-b/chrome-devtools-mcp@latest
   "mcpServers": {
     "chrome-devtools": {
       "command": "npx",
-      "args": ["-y", "@mcp-b/chrome-devtools-mcp@latest"]
+      "args": ["-y", "@mcp-b/chrome-devtools-mcp@latest", "--channel", "stable"]
     }
   }
 }
 ```
+
+The `--channel stable` flag tells the MCP server to use your regular Chrome installation. Without it, the server defaults to Chrome Dev channel, which most people don't have. Use `canary` or `beta` if that's what you have installed. Restart Claude Desktop after editing the config.
+
+### The MCP Server Controls Its Own Chrome Window
+
+This is easy to miss and causes confusion: the Chrome DevTools MCP server launches and controls its own Chrome instance. When you ask Claude to navigate to the kanban board, the board opens in the MCP server's Chrome window -- not in your existing browser.
+
+This means you need to watch the MCP-controlled Chrome window to see cards appear and move in real time. If you're looking at a different Chrome window, you'll see Claude report success but nothing will change on your screen.
+
+The workflow is:
+
+1. Start the kanban board (`npm run dev` or use the deployed URL)
+2. Open Claude Desktop (or Claude Code) and tell it to navigate to the board URL
+3. Watch the Chrome window that the MCP server opened -- that's where the action happens
+
+The first message to Claude should be explicit:
+
+> "Navigate to http://localhost:5174 and list the WebMCP tools"
+
+Claude calls `list_webmcp_tools`, discovers all 8 kanban tools, and you're ready to go.
 
 ### How Discovery Works
 
