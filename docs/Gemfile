@@ -5,8 +5,7 @@ source "https://rubygems.org"
 git_source(:github) {|grzetich| "https://github.com/#portfolio" }
 
 gem 'jekyll'
-# If you also installed the sitemap plugin, add it here:
-# gem 'jekyll-sitemap'
+gem 'jekyll-sitemap'
 # If you use any other plugins, list them here too.
 
 # gem "rails"

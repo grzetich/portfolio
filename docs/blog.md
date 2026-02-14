@@ -5,7 +5,7 @@ description: "Stay up-to-date with my latest insights on technical content, web 
 permalink: /blog.html
 ---
 <div class="posts-list">
-    {% for post in site.posts reversed %}
+    {% for post in site.posts %}
         <div class="post-list-item">
             <h3>
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>

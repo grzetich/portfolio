@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }} - {{ page.title | default: site.description }}</title>
+    <title>{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title | default: site.title }} | Ed Grzetich{% endif %}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
 
     <!-- Favicon -->
     <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon-16x16.png" type="image/x-icon">
     <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon-32x32.png" type="image/x-icon">
+
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
 
     <!-- Open Graph & Twitter Card Meta -->
     <meta property="og:title" content="{{ page.title | default: site.title }}">
@@ -21,6 +23,18 @@
     <meta name="twitter:description" content="{{ page.description | default: site.description }}">
     <meta name="twitter:image" content="{% if page.hero_image %}{{ page.hero_image }}{% else %}https://placehold.co/1200x630/B91C1C/FFFFFF?text=Share+Image{% endif %}">
 
+    <script>
+    (function() {
+        var theme = localStorage.getItem('theme');
+        if (!theme) {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    })();
+    </script>
+
     <style>
         /* --- Global Styles & Variables --- */
         :root {
@@ -28,14 +42,36 @@
             --brand-color-dark: #7f1d1d;
             --text-color-primary: #1f2937;
             --text-color-secondary: #4b5563;
+            --text-color-muted: #6b7280;
             --background-color: #f3f4f6;
             --card-background: #ffffff;
             --border-color: #e5e7eb;
+            --surface-color: #f8f9fa;
+            --tag-background: #e9ecef;
+            --tag-color: #495057;
+            --code-block-bg: #1f2937;
+            --code-block-text: #f3f4f6;
+        }
+        [data-theme="dark"] {
+            --brand-color: #ef4444;
+            --brand-color-dark: #dc2626;
+            --text-color-primary: #e5e7eb;
+            --text-color-secondary: #9ca3af;
+            --text-color-muted: #6b7280;
+            --background-color: #111827;
+            --card-background: #1f2937;
+            --border-color: #374151;
+            --surface-color: #1a2332;
+            --tag-background: #374151;
+            --tag-color: #d1d5db;
+            --code-block-bg: #0f172a;
+            --code-block-text: #e2e8f0;
         }
         body {
             font-family: 'Inter', sans-serif; /* Consider adding a @import for Inter from Google Fonts if not already present */
             background-color: var(--background-color);
             color: var(--text-color-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
             margin: 0;
             padding: 1.5rem;
             line-height: 1.6;
@@ -50,17 +86,30 @@
             text-align: center;
             margin-bottom: 2.5rem;
         }
+        .header-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .header-controls {
+            position: absolute;
+            right: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
         header h1 {
-            font-size: 3rem; /* text-5xl */
-            font-weight: 800; /* font-extrabold */
+            font-size: 3rem;
+            font-weight: 800;
             margin-bottom: 1rem;
         }
         header nav {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            font-size: 1.25rem; /* text-xl */
-            font-weight: 500; /* font-medium */
+            font-size: 1.25rem;
+            font-weight: 500;
         }
         header nav a {
             color: var(--brand-color);
@@ -69,6 +118,82 @@
         }
         header nav a:hover {
             color: var(--brand-color-dark);
+        }
+
+        /* --- Hamburger Button --- */
+        .nav-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.25rem;
+            display: none;
+            align-items: center;
+            color: var(--brand-color);
+            transition: color 0.2s ease;
+        }
+        .nav-toggle:hover {
+            color: var(--brand-color-dark);
+        }
+        .nav-toggle svg {
+            width: 26px;
+            height: 26px;
+        }
+        .nav-toggle .hamburger-top,
+        .nav-toggle .hamburger-mid,
+        .nav-toggle .hamburger-bot {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform-origin: center;
+        }
+        .nav-toggle.open .hamburger-top {
+            transform: translate(0, 6px) rotate(45deg);
+        }
+        .nav-toggle.open .hamburger-mid {
+            opacity: 0;
+        }
+        .nav-toggle.open .hamburger-bot {
+            transform: translate(0, -6px) rotate(-45deg);
+        }
+
+        /* --- Mobile Nav --- */
+        @media (max-width: 768px) {
+            .header-row {
+                justify-content: space-between;
+            }
+            .header-controls {
+                position: static;
+            }
+            header h1 {
+                font-size: 1.75rem;
+                margin-bottom: 0;
+            }
+            .nav-toggle {
+                display: flex;
+            }
+            header nav {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                margin-top: 1rem;
+                background: var(--card-background);
+                border: 1px solid var(--border-color);
+                border-radius: 0.5rem;
+                overflow: hidden;
+            }
+            header nav.open {
+                display: flex;
+            }
+            header nav a {
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid var(--border-color);
+                font-size: 1.1rem;
+                text-align: left;
+            }
+            header nav a:last-child {
+                border-bottom: none;
+            }
+            header nav a:hover {
+                background: var(--background-color);
+            }
         }
 
         /* --- General Content & Typography --- */
@@ -106,14 +231,14 @@
             margin: 0 0 1rem 0;
         }
         code {
-            background-color: #f3f4f6;
+            background-color: var(--background-color);
             padding: 0.25rem 0.5rem;
             border-radius: 0.25rem;
             font-family: monospace;
         }
         pre {
-            background-color: var(--text-color-primary);
-            color: #f3f4f6;
+            background-color: var(--code-block-bg);
+            color: var(--code-block-text);
             padding: 1rem;
             border-radius: 0.5rem;
             overflow-x: auto;
@@ -136,7 +261,7 @@
 
         /* --- Blog Post Specifics --- */
         .post-meta {
-            color: #6b7280;
+            color: var(--text-color-muted);
             font-size: 0.875rem;
             margin-bottom: 1rem;
         }
@@ -173,7 +298,7 @@
         /* --- Footer --- */
         footer {
             text-align: center;
-            color: #6b7280;
+            color: var(--text-color-muted);
             font-size: 0.875rem;
             margin-top: 2.5rem;
         }
@@ -195,7 +320,7 @@
         .social-icons svg {
             width: 32px;
             height: 32px;
-            fill: #6b7280;
+            fill: var(--text-color-muted);
         }
 
         /* --- Hero Section Styles --- */
@@ -257,12 +382,12 @@
         .approach-section h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: #333;
+            color: var(--text-color-primary);
         }
         .approach-section .intro {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            color: #555;
+            color: var(--text-color-secondary);
         }
         .approach-pillars {
             display: grid;
@@ -271,7 +396,7 @@
             margin: 2rem 0;
         }
         .pillar {
-            background: #f8f9fa;
+            background: var(--surface-color);
             padding: 1.5rem;
             border-radius: 8px;
             border-left: 4px solid var(--brand-color);
@@ -279,7 +404,7 @@
         .pillar h3 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--text-color-primary);
         }
         .pillar ul {
             list-style: none;
@@ -289,7 +414,7 @@
             margin-bottom: 0.75rem;
             padding-left: 1.5rem;
             position: relative;
-            color: #555;
+            color: var(--text-color-secondary);
         }
         .pillar li:before {
             content: "→";
@@ -300,7 +425,7 @@
         }
         .approach-footer {
             font-style: italic;
-            color: #666;
+            color: var(--text-color-secondary);
             margin-top: 2rem;
             text-align: center;
         }
@@ -310,7 +435,7 @@
             max-width: 1000px;
             margin: 4rem auto;
             padding: 3rem 2rem;
-            background: #f8f9fa;
+            background: var(--surface-color);
             border-radius: 12px;
         }
         .work-section h2 {
@@ -321,7 +446,7 @@
         .work-section .intro {
             text-align: center;
             font-size: 1.1rem;
-            color: #555;
+            color: var(--text-color-secondary);
             margin-bottom: 2rem;
         }
         .engagement-types {
@@ -331,7 +456,7 @@
             margin: 2rem 0;
         }
         .engagement {
-            background: white;
+            background: var(--card-background);
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -343,12 +468,12 @@
         .what-i-bring {
             margin: 2rem 0;
             padding: 1.5rem;
-            background: white;
+            background: var(--card-background);
             border-radius: 8px;
         }
         .what-i-bring h3 {
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--text-color-primary);
         }
         .what-i-bring ul {
             list-style: none;
@@ -357,7 +482,7 @@
         .what-i-bring li {
             padding: 0.5rem 0 0.5rem 2rem;
             position: relative;
-            color: #555;
+            color: var(--text-color-secondary);
         }
         .what-i-bring li:before {
             content: "✓";
@@ -391,7 +516,7 @@
             transform: translateY(-2px);
         }
         .btn-secondary {
-            background: white;
+            background: var(--card-background);
             color: var(--brand-color);
             border: 2px solid var(--brand-color);
         }
@@ -403,7 +528,7 @@
 
         /* --- Enhanced Project Styles --- */
         .project {
-            background: white;
+            background: var(--card-background);
             padding: 2rem;
             margin: 2rem 0;
             border-radius: 12px;
@@ -412,7 +537,7 @@
         .project h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--text-color-primary);
         }
         .project-meta {
             display: flex;
@@ -421,11 +546,11 @@
             margin-bottom: 1.5rem;
         }
         .tag {
-            background: #e9ecef;
+            background: var(--tag-background);
             padding: 0.25rem 0.75rem;
             border-radius: 4px;
             font-size: 0.85rem;
-            color: #495057;
+            color: var(--tag-color);
         }
         .project-section {
             margin: 1.5rem 0;
@@ -447,13 +572,95 @@
             margin-top: 1.5rem;
             flex-wrap: wrap;
         }
+
+        /* --- Scroll Animations --- */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-up:nth-child(2) { transition-delay: 0.1s; }
+        .fade-up:nth-child(3) { transition-delay: 0.2s; }
+        .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+        /* --- Dark Mode Overrides for API Demo (Tailwind classes) --- */
+        [data-theme="dark"] .bg-red-50 { background: var(--surface-color) !important; }
+        [data-theme="dark"] .bg-white { background: var(--card-background) !important; }
+        [data-theme="dark"] .text-gray-700,
+        [data-theme="dark"] .text-gray-800 { color: var(--text-color-secondary) !important; }
+        [data-theme="dark"] .text-gray-600 { color: var(--text-color-muted) !important; }
+        [data-theme="dark"] .bg-gray-100 { background: var(--surface-color) !important; }
+        [data-theme="dark"] .border-red-200,
+        [data-theme="dark"] .border-gray-200,
+        [data-theme="dark"] .border-gray-300 { border-color: var(--border-color) !important; }
+        [data-theme="dark"] .text-red-800 { color: var(--brand-color) !important; }
+        [data-theme="dark"] .text-red-600 { color: var(--brand-color) !important; }
+        [data-theme="dark"] .text-gray-500 { color: var(--text-color-muted) !important; }
+
+        /* --- Dark Mode Toggle Button --- */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.25rem;
+            display: flex;
+            align-items: center;
+            color: var(--brand-color);
+            transition: color 0.2s ease;
+        }
+        .theme-toggle:hover {
+            color: var(--brand-color-dark);
+        }
+        .theme-toggle svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>{{ site.title }}</h1>
-            <nav>
+            <div class="header-row">
+                <h1>{{ site.title }}</h1>
+                <div class="header-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line class="hamburger-top" x1="3" y1="6" x2="21" y2="6"></line>
+                            <line class="hamburger-mid" x1="3" y1="12" x2="21" y2="12"></line>
+                            <line class="hamburger-bot" x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav id="nav-menu">
                 <a href="{{ site.baseurl }}/">Home</a>
                 <a href="{{ site.baseurl }}/about.html">About Me</a>
                 <a href="{{ site.baseurl }}/#projects">Projects</a>
@@ -483,5 +690,71 @@
             <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // --- Dark Mode Toggle ---
+        var toggle = document.getElementById('theme-toggle');
+        var sunIcon = document.getElementById('theme-icon-sun');
+        var moonIcon = document.getElementById('theme-icon-moon');
+
+        function updateIcon() {
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            sunIcon.style.display = isDark ? 'block' : 'none';
+            moonIcon.style.display = isDark ? 'none' : 'block';
+        }
+        updateIcon();
+
+        toggle.addEventListener('click', function () {
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            var newTheme = isDark ? 'light' : 'dark';
+            if (newTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+            localStorage.setItem('theme', newTheme);
+            updateIcon();
+        });
+
+        // --- Mobile Nav Toggle ---
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', function () {
+            var isOpen = navMenu.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        navMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navMenu.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // --- Scroll Animations ---
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced) {
+            var targets = document.querySelectorAll(
+                '.value-prop, .pillar, .engagement, .what-i-bring, .project, .project-card, .section-container'
+            );
+            targets.forEach(function (el) { el.classList.add('fade-up'); });
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            targets.forEach(function (el) { observer.observe(el); });
+        }
+    });
+    </script>
 </body>
 </html>
