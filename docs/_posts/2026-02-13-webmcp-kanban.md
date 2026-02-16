@@ -123,6 +123,7 @@ The reducer handles seven action types:
 
 Every state change persists automatically:
 
+{% raw %}
 ```javascript
 function BoardProvider({ children }) {
   const [state, dispatch] = useReducer(boardReducer, initialState)
@@ -145,6 +146,7 @@ function BoardProvider({ children }) {
   )
 }
 ```
+{% endraw %}
 
 ### The stateRef Pattern
 
