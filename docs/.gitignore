@@ -1,2 +1,5 @@
 GEMINI.md
 .claude/
+vendor/
+.bundle/
+_site/

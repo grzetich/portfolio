@@ -4,31 +4,78 @@ title: Home
 description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."
 ---
 
-<div class="hero">
-    <h1>Ed Grzetich</h1>
-    <p class="subtitle">Senior Technical Writer Specializing in Developer Documentation</p>
-
-    <div class="value-props">
-        <div class="value-prop">
-            <span class="icon">📚</span>
-            <p>API references and SDK guides that reduce time-to-integration</p>
+<div class="hero full-width">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <h1>Ed Grzetich</h1>
+            <p class="subtitle">Senior Technical Writer Specializing in Developer Documentation</p>
+            <p class="hero-description">
+                I build working applications to write accurate API docs. 15+ years creating developer documentation at AWS, Mastercard, and General Dynamics.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <strong>70%</strong>
+                    <span>Faster with AI workflows</span>
+                </div>
+                <div class="stat">
+                    <strong>30%</strong>
+                    <span>Better satisfaction</span>
+                </div>
+                <div class="stat">
+                    <strong>15+</strong>
+                    <span>Years experience</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="mailto:ed.grzetich@gmail.com" class="btn btn-primary">Get in Touch</a>
+                <a href="{{ site.baseurl }}/resume.html" class="btn btn-secondary">View Resume</a>
+            </div>
         </div>
-        <div class="value-prop">
-            <span class="icon">✅</span>
-            <p>Executable code examples validated through working applications</p>
-        </div>
-        <div class="value-prop">
-            <span class="icon">📈</span>
-            <p>Documentation systems that scale across distributed teams</p>
-        </div>
-        <div class="value-prop">
-            <span class="icon">🚀</span>
-            <p>AI-assisted workflows: 70% faster production, 30% better satisfaction</p>
+        <div class="hero-image">
+            <img src="{{ site.baseurl }}/assets/images/layers.jpg" alt="Ed Grzetich" />
         </div>
     </div>
-
-    <p class="availability">Available for full-time positions and contract engagements.</p>
 </div>
+
+<section class="homepage-blog">
+    <div class="section-header">
+        <h2>Latest Writing</h2>
+        <a href="{{ site.baseurl }}/blog.html" class="view-all">View All Posts →</a>
+    </div>
+
+    <div class="blog-grid">
+        {% assign recent_posts = site.posts | sort: "date" | reverse | slice: 0, 6 %}
+        {% for post in recent_posts %}
+        <article class="blog-card">
+            <a href="{{ post.url | relative_url }}" class="card-link">
+                {% if post.hero_image %}
+                <div class="card-image">
+                    <img src="{{ post.hero_image }}" alt="{{ post.title }}" loading="lazy" />
+                    <div class="date-badge">{{ post.date | date: "%b %d, %Y" }}</div>
+                </div>
+                {% else %}
+                <div class="card-image card-image-placeholder">
+                    <div class="date-badge">{{ post.date | date: "%b %d, %Y" }}</div>
+                </div>
+                {% endif %}
+                <div class="card-content">
+                    <h3 class="card-title">{{ post.title }}</h3>
+                    {% if post.description %}
+                    <p class="card-excerpt">{{ post.description | strip_html | truncatewords: 20 }}</p>
+                    {% endif %}
+                    {% if post.categories %}
+                    <div class="card-tags">
+                        {% for category in post.categories limit:3 %}
+                        <span class="tag">{{ category }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
 
 <section id="approach" class="approach-section">
     <h2>My Approach to Developer Documentation</h2>
@@ -67,6 +114,8 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 
     <p class="approach-footer">This approach has proven successful across cloud services (AWS), payment platforms (Mastercard), and defense systems (General Dynamics).</p>
 </section>
+
+<section id="projects">
 
 <div class="project">
     <h3>AWS Amplify Help Panel Component</h3>
@@ -176,24 +225,7 @@ This targeted approach—reducing noise, improving focus, and ensuring accuracy�
 
 </div>
 
-<!-- <div class="project-card" markdown="1">
-
-### S3 Documentation Updates with AI Tools
-
-I have contributed in a number of ways to the Simple Storage Service (S3) service documentation. In the last year, the service has grown from one to three bucket types to store objects. The documentation needed some follow-on work to include descriptions of the new bucket types and to update procedures to account for changes in the console interface to accommodate the new bucket types.
-
-I collaborated with the service team and other members of the writing team to develop the new description of [bucket types](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html#BasicsBucket) to include the new bucket types (directory and table buckets) and improve the description of the original bucket type (general purpose buckets). The description of each bucket type now clearly explains why customers would want to choose it, describes how access can be granted, and includes a link for detailed information.
-
-To update procedures to account for the changes in the console interface, I used internal AI tools and a number of prompts to automate the work.
-
-*   I first ensured the tools understood the scope of the functionality of the new bucket types, because only procedures that included functionality of multiple bucket types would need to be changed.
-*   Then, I used the tools to identify the procedures that would need to be changed.
-*   Finally, I provided the tools the XML code to use to make the changes.
-*   For quality control, I spot-checked the changed code and used the text output as to another AI tool to perform the procedures in the AWS console and identify any problems it found.
-
-Using AI as a work partner was more thorough and less prone to error than other methods, such as searching the documentation for topics that needed to be updated and updating them manually or through a large-scale change like find-replace.
-
-</div> -->
+</section>
 
 {% include api_demo.html %}
 

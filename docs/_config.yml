@@ -11,7 +11,7 @@ url: "https://grzeti.ch" # No need to set this explicitly for GitHub Pages unles
 
 # Build settings
 markdown: kramdown
-theme: minima # You can keep the default minima theme; our custom CSS will override most of it.
+# theme: minima # Disabled - using fully custom layouts
 permalink: /blog/:title.html # URL structure for blog posts (e.g., /blog/my-first-post.html)
 
 # Jekyll plugins (important for sitemap)
