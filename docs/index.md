@@ -180,6 +180,19 @@ It runs entirely in the browser using cl100k_base tokenization. No AI, no API ke
 
 <div class="project-card" markdown="1">
 
+### Tokens Not Jokin' — Does Doc Format Affect AI Code Generation?
+
+A research book based on 21,000+ integration tests across 4 AI models, investigating whether API documentation format affects token cost and code generation quality. I built two custom control APIs with zero public footprint to eliminate training data contamination, then documented each in four formats—YAML, OpenAPI, Markdown, and a novel format called DON—to isolate format as the only variable.
+
+The book covers token efficiency findings, error handling patterns across model sizes, a decision framework for choosing documentation formats, and a practical approach to single-source documentation that serves both human and AI audiences.
+
+[Learn More](https://tokensnotjokin.com){: .btn .btn-primary target="_blank"}
+[Get the Book](https://leanpub.com/tokensnotjokin){: .btn .btn-secondary target="_blank"}
+
+</div>
+
+<div class="project-card" markdown="1">
+
 ### Architecting a Resilient Pokémon TCG Data API for LLM Integration
 
 This project involved the development of a Python Flask API to serve comprehensive, real-time Pokémon Trading Card Game (TCG) data. The goal was to create a robust, accessible backend capable of supporting various applications, including seamless integration with Large Language Models (LLMs).
