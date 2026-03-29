@@ -118,6 +118,19 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 
 <div class="project-card" markdown="1">
 
+### not-claw: A Personal AI Agent That Lives in Telegram and Thinks in Notion
+
+A self-hosted agent that talks to you on Telegram and stores its entire brain in Notion via the Notion MCP server. It reads a Soul page for identity, a Memory page for context, a Skills database for instructions, and a Tasks database as its work queue. Every 30 minutes, a heartbeat wakes the agent to work through pending tasks on its own.
+
+The agent has zero hardcoded Notion API calls. Claude discovers 22 MCP tools at startup, the client filters them to 8, and the agent decides which to call. Cost optimizations include a heartbeat pre-check that skips Claude when no tasks are pending, Soul page caching, and tool filtering that saves ~1,000 input tokens per call.
+
+[View Repository](https://github.com/grzetich/not-claw){: .btn .btn-primary target="_blank"}
+[Read the Blog Post]({{ site.baseurl }}/blog/not-claw.html){: .btn .btn-secondary}
+
+</div>
+
+<div class="project-card" markdown="1">
+
 ### How Much Do Your Docs Cost to Read?
 
 Did you know your audience has to pay to read your docs? They do if your audience is AI. I built a token cost calculator that lets you paste any structured documentation and see how many tokens it takes to represent it across different formats—JSON, YAML, JSON Compact, Plain Text—with cost estimates at scale.
