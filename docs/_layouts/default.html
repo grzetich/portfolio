@@ -295,6 +295,38 @@
             margin-top: 0.5rem;
         }
 
+        /* --- Book Banner --- */
+        .book-banner {
+            background: linear-gradient(135deg, var(--brand-color), var(--brand-color-dark));
+            color: #ffffff;
+            padding: 1.25rem 2rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        .book-banner p {
+            color: #ffffff;
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+        .book-banner a {
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .book-banner a:hover {
+            opacity: 0.85;
+        }
+        .book-banner .book-title {
+            font-style: italic;
+        }
+        footer .book-banner {
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+        }
+
         /* --- Footer --- */
         footer {
             text-align: center;
@@ -675,6 +707,11 @@
         </main>
 
         <footer>
+            {% unless page.title == "Home" %}
+            <div class="book-banner">
+                <p><span class="book-title">Tokens Not Jokin': How API Documentation Format Affects AI Code Generation</span> is available now. <a href="https://tokensnotjokin.com" target="_blank" rel="noopener noreferrer">Learn more</a></p>
+            </div>
+            {% endunless %}
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/ed-grzetich/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

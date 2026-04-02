@@ -4,6 +4,10 @@ title: Home
 description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."
 ---
 
+<div class="book-banner">
+    <p><span class="book-title">Tokens Not Jokin': How API Documentation Format Affects AI Code Generation</span> is available now. <a href="https://tokensnotjokin.com" target="_blank" rel="noopener noreferrer">Learn more</a></p>
+</div>
+
 <div class="hero">
     <h1>Ed Grzetich</h1>
     <p class="subtitle">Senior Technical Writer Specializing in Developer Documentation</p>
