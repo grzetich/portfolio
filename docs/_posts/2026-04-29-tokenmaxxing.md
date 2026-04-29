@@ -6,8 +6,6 @@ canonical_url: "https://tokensnotjokin.com/blog/tokenmaxxing"
 description: "Nobody is tracking the tokens your documentation burns before the developer even starts."
 ---
 
-# Tokenmaxxing Is Visible. Doc Format Waste Isn't.
-
 *Originally published at [tokensnotjokin.com](https://tokensnotjokin.com/blog/tokenmaxxing)*
 
 Companies are building leaderboards to track how many tokens their developers burn. Nobody is tracking how many tokens the documentation burns before the developer even starts.
