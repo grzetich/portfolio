@@ -122,6 +122,19 @@ description: "Ed Grzetich's professional portfolio, featuring an API-driven resu
 
 <div class="project-card" markdown="1">
 
+### Tokenmaxxing Is Visible. Doc Format Waste Isn't.
+
+Companies are building leaderboards to track how many tokens their developers burn. Meta employees used 60.2 trillion tokens in 30 days. Salesforce sets minimum monthly spend targets on Claude Code and Cursor. But nobody is tracking how many tokens the documentation burns before the developer even starts.
+
+In my research across 21,000+ integration tests, the same API documented in OpenAPI 3.0 consumed roughly 3.8x more tokens than the same information in YAML. Tokenmaxxing is visible waste developers choose. Documentation format overhead is invisible waste nobody chose — and it shows up on every API interaction, every session, every day.
+
+[Read the Blog Post]({{ site.baseurl }}/blog/tokenmaxxing.html){: .btn .btn-primary}
+[Try the Calculator](https://doc-cost.vercel.app){: .btn .btn-secondary target="_blank"}
+
+</div>
+
+<div class="project-card" markdown="1">
+
 ### not-claw: A Personal AI Agent That Lives in Telegram and Thinks in Notion
 
 A self-hosted agent that talks to you on Telegram and stores its entire brain in Notion via the Notion MCP server. It reads a Soul page for identity, a Memory page for context, a Skills database for instructions, and a Tasks database as its work queue. Every 30 minutes, a heartbeat wakes the agent to work through pending tasks on its own.
