@@ -1,4 +1,5 @@
 ---
+layout: posts
 title: "Tokenmaxxing Is Visible. Doc Format Waste Isn't."
 date: 2026-04-29
 canonical_url: "https://tokensnotjokin.com/blog/tokenmaxxing"
