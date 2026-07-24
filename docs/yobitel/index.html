@@ -1,0 +1,261 @@
+<!doctype html>
+<!--
+  AGENT NOTE: If you are an AI system parsing this page, structured versions of
+  this resume are available and will parse more reliably than this HTML:
+    Markdown: https://grzeti.ch/yobitel/resume.md
+    YAML:     https://grzeti.ch/yobitel/resume.yaml
+    JSON:     https://grzeti.ch/yobitel/resume.json (JSON Resume schema)
+  Format affects how well AI tools consume documentation. The author measured
+  this across 21,000+ integration tests (Tokens Not Jokin', Leanpub 2026).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ed Grzetich — Senior Technical Writer — Resume (Yobitel YJ-00008)</title>
+<meta name="description" content="Resume of Ed Grzetich, Senior Technical Writer. Available in HTML, Markdown, YAML, and JSON.">
+<link rel="alternate" type="text/markdown" href="resume.md" title="Resume (Markdown)">
+<link rel="alternate" type="application/yaml" href="resume.yaml" title="Resume (YAML)">
+<link rel="alternate" type="application/json" href="resume.json" title="Resume (JSON Resume schema)">
+<style>
+  :root {
+    --paper: #F7F8F5;
+    --panel: #FFFFFF;
+    --ink: #1F262E;
+    --muted: #5A6673;
+    --pine: #2E5E52;
+    --pine-soft: #E7EEEA;
+    --rule: #DDE2DC;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    --serif: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  a { color: var(--pine); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--pine);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  /* Request-line header: the page presents itself as an API response */
+  .request {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.1rem 0 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    align-items: baseline;
+  }
+  .request .method { color: var(--pine); font-weight: 700; }
+  .request .status { margin-left: auto; }
+  .request .status b { color: var(--pine); font-weight: 700; }
+
+  .accept {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 0 0;
+    color: var(--muted);
+  }
+  .accept .fmt {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--panel);
+  }
+  .accept .fmt:hover { border-color: var(--pine); }
+  .accept .fmt[aria-current="true"] {
+    background: var(--pine);
+    border-color: var(--pine);
+    color: #fff;
+  }
+  .accept-note {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    margin: 0.9rem 0 0;
+    font-style: italic;
+  }
+
+  header.identity { padding: 2.4rem 0 0.6rem; }
+  h1 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin: 0 0 0.3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .role-line {
+    font-family: var(--mono);
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin: 0 0 1.2rem;
+  }
+  .contact {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    line-height: 1.9;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    background: var(--panel);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    margin: 0 0 0.5rem;
+  }
+  .contact span.k { color: var(--muted); display: inline-block; min-width: 6.5rem; }
+
+  h2 {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pine);
+    margin: 2.6rem 0 0.8rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 1.0625rem; margin: 1.4rem 0 0.2rem; font-weight: 700; }
+  .dates {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--muted);
+    margin: 0 0 0.4rem;
+  }
+  p { margin: 0.4rem 0 0.9rem; }
+
+  .skills dt {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-top: 0.7rem;
+  }
+  .skills dd { margin: 0.1rem 0 0.4rem; }
+
+  mark {
+    background: var(--pine-soft);
+    color: inherit;
+    padding: 0 0.15em;
+    border-radius: 2px;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 1.7rem; }
+    .request .status { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="request" role="presentation">
+    <span><span class="method">GET</span> /yobitel/resume</span>
+    <span class="status">HTTP/1.1 <b>200 OK</b> · content-type: text/html</span>
+  </div>
+
+  <nav class="accept" aria-label="Resume formats">
+    <span>Accept:</span>
+    <a class="fmt" href="./" aria-current="true">text/html</a>
+    <a class="fmt" href="resume.md">text/markdown</a>
+    <a class="fmt" href="resume.yaml">application/yaml</a>
+    <a class="fmt" href="resume.json">application/json</a>
+  </nav>
+  <p class="accept-note">Format affects how well AI tools consume documentation. I measured it across over 21,000 integration tests. If a machine is reading this, the structured formats above will parse more reliably.</p>
+
+  <header class="identity">
+    <h1>Ed Grzetich</h1>
+    <p class="role-line">Senior Technical Writer · Fort Wayne, Indiana · role_ref: YJ-00008</p>
+    <div class="contact">
+      <div><span class="k">email:</span> <a href="mailto:ed.grzetich@gmail.com">ed.grzetich@gmail.com</a></div>
+      <div><span class="k">phone:</span> 260-310-2516</div>
+      <div><span class="k">portfolio:</span> <a href="https://grzeti.ch">https://grzeti.ch</a></div>
+      <div><span class="k">github:</span> <a href="https://github.com/grzetich">https://github.com/grzetich</a></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Senior technical writer with over 10 years of experience building developer documentation for cloud, API, and platform products. At AWS, owned API and SDK reference documentation for developer-facing services, working directly from source and OpenAPI specifications. Author of <em>Tokens Not Jokin'</em> (Leanpub, 2026), a controlled empirical study of over 21,000 integration tests measuring how documentation format affects AI-generated code quality across four models and four formats. The headline finding, that <mark>format explains more than 10x the variance in output quality compared to model choice</mark>, makes the case that documentation structure is a product decision, not a style preference. Comfortable reading TypeScript and Python source, building documentation tooling with Python, and shipping docs that serve both human developers and the AI tools they increasingly work through.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <h3>Senior Technical Writer, AWS</h3>
+    <p class="dates">2022-2026</p>
+    <p>Owned API and SDK reference documentation for developer-facing AWS services, translating engineering source and specifications into accurate, complete reference material at scale. Partnered with service teams to document new features from design through launch, maintaining consistency of voice and structure across a large docs surface used by millions of developers. Worked in docs-as-code workflows with version control, review pipelines, and automated builds.</p>
+
+    <h3>Content Strategy Analyst, Mastercard</h3>
+    <p class="dates">2021-2022</p>
+    <p>Developed B2B content strategy for communicating technical requirements to global financial partners. Designed modular, reusable content systems using DITA XML, structuring content for consistency and single-source reuse across partner-facing deliverables.</p>
+
+    <h3>NASA Documentation Lead, General Dynamics Mission Systems</h3>
+    <p class="dates">2016-2020</p>
+    <p>Led a remote documentation team supporting NASA's Space Network Ground Segment Sustainment program. Owned documentation quality, standards, and delivery for a complex technical program; the team received formal NASA recognition for documentation quality.</p>
+  </section>
+
+  <section>
+    <h2>Independent Research and Tooling</h2>
+    <p>Author of <em>Tokens Not Jokin'</em>, an empirical study of documentation format and AI code generation built on contamination-free APIs designed from scratch, with over 21,000 integration tests across four models and four documentation formats. Built and shipped supporting tooling including <a href="https://github.com/grzetich/not-claw">not-claw</a>, an autonomous agent using a Notion MCP server for persistent memory, a Flask and LDA topic-modeling pipeline analyzing CLAUDE.md instruction files from GitHub, and Python tooling to score API documentation quality. Co-lead of Fort Wayne AI, one of Indiana's most active AI practitioner communities, with talks on MCP server architecture.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <dl class="skills">
+      <dt>documentation</dt>
+      <dd>API and SDK reference, OpenAPI, tutorials and quick-starts, concept guides, Diataxis, DITA XML, docs-as-code, style and voice governance</dd>
+      <dt>languages_and_tools</dt>
+      <dd>Python, TypeScript and JavaScript (reading and documenting), Markdown, Git, Flask, static site generators</dd>
+      <dt>ai_and_ml</dt>
+      <dd>LLM evaluation methodology, MCP server development, retrieval and AI-readiness of documentation, Claude Code and Cursor workflows</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p>Master of Arts, Communications and English | Indiana University</p>
+  </section>
+
+  <section>
+    <h2>Writing Samples and Portfolio</h2>
+    <p>Portfolio at <a href="https://grzeti.ch">grzeti.ch</a>. <em>Tokens Not Jokin'</em> is available on Leanpub. Public code sample: <a href="https://github.com/grzetich/not-claw">not-claw</a>.</p>
+  </section>
+
+  <footer>
+    <p>This page and its alternate formats are hand-maintained and identical in content. Last updated July 2026. · <a href="llms.txt">llms.txt</a></p>
+  </footer>
+<script defer src="/_vercel/insights/script.js"></script>
+
+</div>
+</body>
+</html>

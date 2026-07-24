@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 title: About Me
 description: "Learn more about Ed Grzetich, a highly experienced technical writer and content strategist."
 permalink: /about.html

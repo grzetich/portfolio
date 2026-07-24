@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 title: Home
 description: "Ed Grzetich's professional portfolio, featuring an API-driven resume, comprehensive writing samples from AWS and earlier career, and content strategy insights."
 ---
@@ -238,7 +238,7 @@ Using AI as a work partner was more thorough and less prone to error than other 
 
 </div> -->
 
-{% include api_demo.html %}
+{% include "api_demo.html" %}
 
 <div class="project-card" markdown="1">
 
@@ -255,7 +255,7 @@ Using AI as a work partner was more thorough and less prone to error than other 
 
 ### For Amazon Web Services (AWS)
 
-While working at AWS, I have primarily supported two services: Snowball Edge and Simple Storage Service (S3). While supporting the Snowball Edge service, I was a solo writer and responsible for maintaining relationships with the product managers and software development managers of the service to be aware of feature releases and other service changes that affect the docs. I also was responsible for managing and triaging docs tickets for the service, scheduling docs work, and reporting on docs activities to the larger customer experience team as well as the service team.
+At AWS, I primarily supported two services: Snowball Edge and Simple Storage Service (S3). While supporting the Snowball Edge service, I was a solo writer and responsible for maintaining relationships with the product managers and software development managers of the service to be aware of feature releases and other service changes that affect the docs. I also was responsible for managing and triaging docs tickets for the service, scheduling docs work, and reporting on docs activities to the larger customer experience team as well as the service team.
 
 For S3, I am a member of a docs team supporting one of the key AWS services. In this role, I am responsible for producing a wide range of docs, including API references, SDK code examples, and infrastructure-as-code framework. I also participate in the team's on-call rotation for ticket triage.
 

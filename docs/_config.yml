@@ -20,6 +20,7 @@ plugins:
 
 # Exclude these files from Jekyll processing
 exclude:
+  - vercel.json
   - Gemfile
   - Gemfile.lock
   - node_modules

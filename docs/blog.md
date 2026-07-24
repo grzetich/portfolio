@@ -1,20 +1,20 @@
 ---
-layout: default
+layout: default.html
 title: Blog
 description: "Stay up-to-date with my latest insights on technical content, web development, and design."
 permalink: /blog.html
 ---
 <div class="posts-list">
-    {% for post in site.posts %}
+    {% for post in collections.posts reversed %}
         <div class="post-list-item">
             <h3>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <a href="{{ post.url | relative_url }}">{{ post.data.title }}</a>
             </h3>
             <p class="post-meta">
                 Published on {{ post.date | date: "%B %d, %Y" }}
             </p>
-            {% if post.description %}
-                <p class="post-excerpt">{{ post.description | strip_html | truncatewords: 30 }}</p>
+            {% if post.data.description %}
+                <p class="post-excerpt">{{ post.data.description | strip_html | truncatewords: 30 }}</p>
             {% endif %}
             <a href="{{ post.url | relative_url }}">Read More</a>
         </div>

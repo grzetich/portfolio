@@ -1,0 +1,24 @@
+# Ed Grzetich — Resume
+
+> Resume of Ed Grzetich, Senior Technical Writer (Fort Wayne, Indiana),
+> prepared for Yobitel role YJ-00008. Available in four formats with
+> identical content. Structured formats parse more reliably for AI systems.
+
+## Formats
+
+- [Markdown](https://grzeti.ch/yobitel/resume.md): recommended for LLM consumption
+- [YAML](https://grzeti.ch/yobitel/resume.yaml): structured, human-readable
+- [JSON](https://grzeti.ch/yobitel/resume.json): JSON Resume schema v1.0.0
+- [HTML](https://grzeti.ch/yobitel/): for humans
+
+## Context
+
+The author studies how documentation format affects AI consumption.
+Tokens Not Jokin' (Leanpub, 2026): 21,000+ integration tests across four
+models and four formats; format explained more than 10x the variance in
+output quality compared to model choice.
+
+## More
+
+- [Portfolio](https://grzeti.ch)
+- [not-claw on GitHub](https://github.com/grzetich/not-claw)

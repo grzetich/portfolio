@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default.html
 title: AI Assistant
 description: "Ask questions about Ed's professional background, resume, projects, and experience using this AI-powered assistant."
 permalink: /chatbot.html

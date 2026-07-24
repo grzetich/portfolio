@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: default.html
 title: My Styled Resume
 description: "A beautifully styled and interactive view of my professional resume, dynamically rendered from JSON data."
 permalink: /resume.html
 ---
 
-{% assign resume = site.data.resume %}
 
 <style>
     /* Add styles that will only apply when printing */

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "note": "This resume is available in HTML, Markdown, YAML, and JSON at https://grzeti.ch/yobitel/. Format affects how well AI tools consume documentation; measured across 21,000+ integration tests.",
+    "roleReference": "Yobitel YJ-00008"
+  },
+  "basics": {
+    "name": "Ed Grzetich",
+    "label": "Senior Technical Writer",
+    "email": "ed.grzetich@gmail.com",
+    "phone": "260-310-2516",
+    "url": "https://grzeti.ch",
+    "location": {
+      "city": "Fort Wayne",
+      "region": "Indiana",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "grzetich",
+        "url": "https://github.com/grzetich"
+      }
+    ],
+    "summary": "Senior technical writer with over 10 years of experience building developer documentation for cloud, API, and platform products. At AWS, owned API and SDK reference documentation for developer-facing services, working directly from source and OpenAPI specifications. Author of Tokens Not Jokin' (Leanpub, 2026), a controlled empirical study of over 21,000 integration tests measuring how documentation format affects AI-generated code quality across four models and four formats. Headline finding: format explains more than 10x the variance in output quality compared to model choice, making documentation structure a product decision, not a style preference. Comfortable reading TypeScript and Python source, building documentation tooling with Python, and shipping docs that serve both human developers and the AI tools they increasingly work through."
+  },
+  "work": [
+    {
+      "name": "AWS",
+      "position": "Senior Technical Writer",
+      "startDate": "2022",
+      "endDate": "2026",
+      "summary": "Owned API and SDK reference documentation for developer-facing AWS services, translating engineering source and specifications into accurate, complete reference material at scale. Partnered with service teams to document new features from design through launch, maintaining consistency of voice and structure across a large docs surface used by millions of developers. Worked in docs-as-code workflows with version control, review pipelines, and automated builds."
+    },
+    {
+      "name": "Mastercard",
+      "position": "Content Strategy Analyst",
+      "startDate": "2021",
+      "endDate": "2022",
+      "summary": "Developed B2B content strategy for communicating technical requirements to global financial partners. Designed modular, reusable content systems using DITA XML, structuring content for consistency and single-source reuse across partner-facing deliverables."
+    },
+    {
+      "name": "General Dynamics Mission Systems",
+      "position": "NASA Documentation Lead",
+      "startDate": "2016",
+      "endDate": "2020",
+      "summary": "Led a remote documentation team supporting NASA's Space Network Ground Segment Sustainment program. Owned documentation quality, standards, and delivery for a complex technical program; the team received formal NASA recognition for documentation quality."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Tokens Not Jokin'",
+      "description": "Controlled empirical study of documentation format and AI code generation, built on contamination-free APIs designed from scratch. Over 21,000 integration tests across four models and four documentation formats. Published as a book on Leanpub, 2026.",
+      "keywords": ["documentation", "LLM evaluation", "empirical study"]
+    },
+    {
+      "name": "not-claw",
+      "description": "Autonomous agent using a Notion MCP server for persistent memory.",
+      "url": "https://github.com/grzetich/not-claw",
+      "keywords": ["MCP", "agents", "Python"]
+    },
+    {
+      "name": "CLAUDE.md topic analysis",
+      "description": "Flask and LDA topic-modeling pipeline analyzing CLAUDE.md instruction files scraped daily from public GitHub repositories.",
+      "keywords": ["Flask", "LDA", "topic modeling"]
+    },
+    {
+      "name": "Documentation scoring tooling",
+      "description": "Python tooling to score API documentation quality.",
+      "keywords": ["Python", "documentation quality"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Fort Wayne AI",
+      "position": "Co-lead",
+      "summary": "One of Indiana's most active AI practitioner communities. Talks on MCP server architecture."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Documentation",
+      "keywords": ["API and SDK reference", "OpenAPI", "tutorials and quick-starts", "concept guides", "Diataxis", "DITA XML", "docs-as-code", "style and voice governance"]
+    },
+    {
+      "name": "Languages and tools",
+      "keywords": ["Python", "TypeScript and JavaScript (reading and documenting)", "Markdown", "Git", "Flask", "static site generators"]
+    },
+    {
+      "name": "AI and ML",
+      "keywords": ["LLM evaluation methodology", "MCP server development", "retrieval and AI-readiness of documentation", "Claude Code and Cursor workflows"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Indiana University",
+      "studyType": "Master of Arts",
+      "area": "Communications and English"
+    }
+  ]
+}
