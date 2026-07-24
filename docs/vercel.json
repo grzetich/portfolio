@@ -1,25 +1,10 @@
 {
   "rewrites": [
-    {
-      "source": "/yobitel",
-      "has": [
-        { "type": "header", "key": "accept", "value": ".*text/markdown.*" }
-      ],
-      "destination": "/yobitel/resume.md"
-    },
-    {
-      "source": "/yobitel",
-      "has": [
-        { "type": "header", "key": "accept", "value": ".*application/json.*" }
-      ],
-      "destination": "/yobitel/resume.json"
-    },
-    {
-      "source": "/yobitel",
-      "has": [
-        { "type": "header", "key": "accept", "value": ".*yaml.*" }
-      ],
-      "destination": "/yobitel/resume.yaml"
-    }
+    { "source": "/yobitel", "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }], "destination": "/yobitel/resume.md" },
+    { "source": "/yobitel/", "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }], "destination": "/yobitel/resume.md" },
+    { "source": "/yobitel", "has": [{ "type": "header", "key": "accept", "value": ".*application/json.*" }], "destination": "/yobitel/resume.json" },
+    { "source": "/yobitel/", "has": [{ "type": "header", "key": "accept", "value": ".*application/json.*" }], "destination": "/yobitel/resume.json" },
+    { "source": "/yobitel", "has": [{ "type": "header", "key": "accept", "value": ".*yaml.*" }], "destination": "/yobitel/resume.yaml" },
+    { "source": "/yobitel/", "has": [{ "type": "header", "key": "accept", "value": ".*yaml.*" }], "destination": "/yobitel/resume.yaml" }
   ]
 }
